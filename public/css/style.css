@@ -1,0 +1,120 @@
+.previewScreen label{
+	color:#000;
+	font-weight:400;
+}
+.previewScreen input:disabled ,
+.previewScreen .select2-container--bootstrap.select2-container--disabled .select2-selection--single .select2-selection__rendered,
+.previewScreen textarea:disabled 
+{
+	font-weight:bold;
+	color:#434343;
+	
+	
+}
+.previewScreen .form-control[disabled],
+.previewScreen .select2-container--bootstrap.select2-container--disabled .select2-selection
+{
+	background:transparent;
+	border-bottom:1px solid #C3C3C3;
+	border-radius:0;
+	padding:6px 0;
+}
+
+
+.previewScreen .select2-container--bootstrap.select2-container--disabled .select2-selection--single .select2-selection__arrow b{
+	display:none;
+}
+
+.previewScreen .input-group-addon input[disabled]{
+	cursor:default;
+	background:transparent;
+	border:0;
+	border-bottom:1px solid #C3C3C3;
+	border-radius:0;
+	padding:.5px 0;
+}
+
+.messageScreen{
+	background:#2957a4;
+	min-height:300px;
+	display:table;
+}
+.messageScreen h1{
+	display:table-cell;
+	vertical-align:middle;
+	padding:5px 0;
+	margin-top:10px;
+	color:#fff !important;
+	line-height:1.5em;
+	
+}
+.messageScreenFullWidth{
+	vertical-align:middle;
+	padding:40px 0;
+	margin-top:10px;
+	
+	line-height:1.5em
+	;background:#2957a4;
+}
+.messageScreenFullWidth h1{
+	color:#fff !important;
+}
+.messageScreenFullWidth  i{
+	margin-bottom:10px;
+}
+.messageScreenFullWidth button{
+	vertical-align:middle;
+	background:#fff;
+	color:#2957a4;
+	margin-bottom:50px;
+	width:150px;
+}
+
+
+.messageDataScreen{
+	display:table;
+	border:1px solid #2957a4;
+	background:#fff;
+	min-height:300px;
+	padding:0 60px;
+}
+.messageDataScreen div{
+	display:table-cell;
+	vertical-align:middle;
+	
+}
+.messageDataScreen div strong{
+	color:#2957a4;
+	text-decoration:underline;
+}
+.messageDataScreen div p{
+	font-size:22px;
+	text-align:left;
+	width:100%;
+	margin-bottom:5px;
+	color:#7F7F7F;
+	display:block;
+}
+.messageDataScreen .note{
+	padding:10px 0;
+	font-size:12px;
+	font-style:italic;
+}
+.messageDataScreen div  button{
+	width:150px;
+	float:left;
+	font-size:16px;
+	padding:0;
+	margin:5px;
+	font-weight:normal
+}
+.greyGroup{
+	background: #fff;
+	padding: 20px;
+	position:relative;
+	height: auto;
+	clear: both;
+	
+	//margin-bottom: 50px;
+
+}
