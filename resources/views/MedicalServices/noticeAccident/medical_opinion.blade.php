@@ -90,91 +90,106 @@
                             <div id="collapseOne111" role="tabpanel" aria-labelledby="cardt2">
                                 <div class="card-body">
                                     <div class="row p-t-20">
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label class="control-label">@lang('Query To : ')</label>
-                                                <select class="form-control">
-                                                    <option hidden selected readonly>Please Select</option>
-                                                    <option>Employer</option>
-                                                    <option>Employee</option>
-                                                    <option>Scheme</option>
-                                                    <option>RTW</option>
-                                                    <option>Medical Investigation</option>
-                                                </select>
+                                        
+        
+        
+                                        <div class="col-md-6 offset-6">
+                                                <a class="btn-success link a1" id="btn_query" data-toggle="modal"
+                                                    data-whatever="@getbootstrap" aria-expanded="true">
+                                                    Add Row 
+                                                </a>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="control-label">@lang('Investigation Type : ')</label>
-                                                <select class="form-control" name="moreinfo2" id="moreinfo2">
-                                                    <option value="PS" hidden selected readonly>Please Select</option>
-                                                    <option>Internal Investigation</option>
-                                                    <option>Report</option>
-                                                    <option>Speacial Report</option>
-                                                    <option value="M">Medical Clarification</option>
-                                                </select>
+                                            <div class="table-responsive m-t-40">
+                                                <table id="myTable_query" class="table table-bordered table-striped">
+                                                    <thead style="background-color:skyblue;">
+                                                        <tr>
+                                                            <th>No.</th>
+                                                            <th>Query To</th>
+                                                            <th>Request For Supporting Document</th>
+                                                            <th>Remarks</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr id="clari1">
+                                                            <td style="display:none;"><input type="hidden" value="1"></td>
+                                                            <td>1</td>
+                                                            <td>Presenting Complaint?</td>
+                                                            <td><div class="input-group-append">
+                                                                <span class="input-group-text" style="background-color: #d8e8e9;"><a
+                                                                        class="get-code" data-toggle="modal"
+                                                                        data-target="#modal_document" data-whatever="@getbootstrap"
+                                                                        href="#tt1" aria-expanded="true"><i class="fas fa-file-alt"
+                                                                            title="Request Document
+                                                                                " data-toggle="tooltip"></i></a></span>
+                                                                @include('MedicalServices.noticeAccident.modal_document')
+                                                            </div></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <tbody>
+                                                            <tr id="clari2">
+                                                                <td style="display:none;"><input type="hidden" value="2">>2</td>
+                                                                <td>2</td>
+                                                                <td>Past Medical History including</td>
+                                                                <td><div class="input-group-append">
+                                                                    <span class="input-group-text" style="background-color: #d8e8e9;"><a
+                                                                            class="get-code" data-toggle="modal"
+                                                                            data-target="#modal_document" data-whatever="@getbootstrap"
+                                                                            href="#tt1" aria-expanded="true"><i class="fas fa-file-alt"
+                                                                                title="Request Document
+                                                                                    " data-toggle="tooltip"></i></a></span>
+                                                                    @include('MedicalServices.noticeAccident.modal_document')
+                                                                </div></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                        <tbody>
+                                                                <tr id="clari3">
+                                                                    <td style="display:none;"><input type="hidden" value="3">>3</td>
+                                                                    <td>2</td>
+                                                                    <td>Physical examination findings on the first visit</td>
+                                                                    <td><div class="input-group-append">
+                                                                        <span class="input-group-text" style="background-color: #d8e8e9;"><a
+                                                                                class="get-code" data-toggle="modal"
+                                                                                data-target="#modal_document" data-whatever="@getbootstrap"
+                                                                                href="#tt1" aria-expanded="true"><i class="fas fa-file-alt"
+                                                                                    title="Request Document
+                                                                                        " data-toggle="tooltip"></i></a></span>
+                                                                        @include('MedicalServices.noticeAccident.modal_document')
+                                                                    </div></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+
+                                                            <tbody>
+                                                                    <tr id="clari4">
+                                                                        <td style="display:none;"><input type="hidden" value="4"></td>
+                                                                        <td>4</td>
+                                                                        <td>Diagnosis of the patient’s problem</td>
+                                                                        <td><div class="input-group-append">
+                                                                            <span class="input-group-text" style="background-color: #d8e8e9;"><a
+                                                                                    class="get-code" data-toggle="modal"
+                                                                                    data-target="#modal_document" data-whatever="@getbootstrap"
+                                                                                    href="#tt1" aria-expanded="true"><i class="fas fa-file-alt"
+                                                                                        title="Request Document
+                                                                                            " data-toggle="tooltip"></i></a></span>
+                                                                            @include('MedicalServices.noticeAccident.modal_document')
+                                                                        </div></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                </table>
                                             </div>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label class="control-label">@lang('Date : ')</label>
-                                            <input type="text" value="" class="form-control" readonly>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-
-                                            <label class="control-label">@lang('Request for Supporting Document
-                                                :')</label>
-
-                                            <div class="input-group ">
-                                                <input type="text" value="" class="form-control" readonly>
-                                                <div class="input-group-append">
-                                                    <span class="input-group-text" style="background-color: #d8e8e9;"><a
-                                                            class="get-code" data-toggle="modal"
-                                                            data-target="#modal_document" data-whatever="@getbootstrap"
-                                                            href="#tt1" aria-expanded="true"><i class="fas fa-file-alt"
-                                                                title="Request Document
-                                                                    " data-toggle="tooltip"></i></a></span>
-                                                    @include('MedicalServices.noticeAccident.modal_document')
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label class="control-label">@lang('Remarks :')</label>
-                                            <textarea type="text" rows="5" class="form-control" readonly></textarea>
+                                        <br>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card " id="hello">
-                                    <div class="card-header" role="tab" id="subheading2">
-                                        <h5 class="mb-0">
-                                            <a class="collapsed link" data-toggle="collapse" data-parent="#accordion1"
-                                                href="#subcollapse2" aria-expanded="false"
-                                                aria-controls="subcollapse2"><i class="fa fa-plus"></i>
-                                                Medical Clarification
-                                            </a>
-                                        </h5>
-                                    </div>
-                                    <div id="subcollapse2" class="collapse " role="tabpanel"
-                                        aria-labelledby="subheading2">
-                                        <div class="card-body">
-                                            <div class="form-body">
-                                                <div class="row p-t-20">
-                                                    <div class="form-group">
-                                                        @include('MedicalServices.noticeAccident.clarification')
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
                             </div>
                         </div>
                     </div>
