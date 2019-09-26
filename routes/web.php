@@ -212,6 +212,9 @@ Route::get('/medical_services', 'medicalServices\WbmedicalController@index');
 Route::get('/home_mohuk', 'medicalServices\WbmedicalController@index');
 Route::get('/home_moei', 'medicalServices\WbmedicalController@index');
 Route::get('/home_abppp', 'medicalServices\WbmedicalController@index');
+Route::get('/home_acpp', 'medicalServices\WbmedicalController@index');
+Route::get('/home_aobppp', 'medicalServices\WbmedicalController@index');
+Route::get('/home_aocpp', 'medicalServices\WbmedicalController@index');
 
 Route::get('/noticeAccident', 'medicalServices\AccidentController@index');
 
@@ -224,4 +227,13 @@ Route::get('/abppp', function () {
 });
 Route::get('/index', function () {  
     return view('MedicalServices.ABPPP.index');
+});
+Route::get('/acpp', function () {
+    return view('MedicalServices.ACPP.index');
+});
+Route::get('/index', function () {  
+    return view('MedicalServices.AOBPPP.index');
+});
+Route::get('/index', function () {  
+    return view('MedicalServices.AOCPP.index');
 });

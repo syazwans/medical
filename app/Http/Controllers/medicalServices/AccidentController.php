@@ -13,6 +13,11 @@ use DB;
 use Cookie;
 use Response;
 use Mail;
+use GuzzleHttp\Psr7;
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Exception\ClientException;
+
 
 class AccidentController extends Controller
 {
@@ -35,7 +40,7 @@ class AccidentController extends Controller
        
         $appdetails = $jsondecodems;
         //  return $appdetails;
-
+        // dd($appdetails);
         $jsondecodeobd= "";
         $a=$this->getOBD($jsondecodeobd,$id);
         // return $a;
@@ -113,24 +118,25 @@ class AccidentController extends Controller
         // $caserefno= session('caserefno');
         
         $caserefno = $id;
-        $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetApplicationDetails?caserefno='.$caserefno;
+        // dd($caserefno);
+        // $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetApplicationDetails?caserefno='.$caserefno;
 
         //  return $url;
 
-        $ch = curl_init();
+        // $ch = curl_init();
         
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_PROXY, '');
+        // curl_setopt($ch, CURLOPT_URL, $url);
+        // curl_setopt($ch, CURLOPT_PROXY, '');
         
-        curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
+        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($ch);
+        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // $result = curl_exec($ch);
         // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        curl_close($ch);
-        $jsondecodems = json_decode($result);
+        // curl_close($ch);
+        // $jsondecodems = json_decode($result);
 
         // return $jsondecodems;
         // close connection
@@ -149,145 +155,283 @@ class AccidentController extends Controller
         // else{
         //     $jsondecodems = json_decode($result);
         // }
+        try {
+        $client = new Client([
+            // Base URI is used with relative requests
+            'base_uri' => env('WS_IP', 'localhost').'/api/wsmotion/',
+            // You can set any number of default request options.
+            'timeout'  => 2.0,
+        ]);
+            // dd($caserefno);
+        $resource = array(
+            "caserefno"=> $caserefno);
+        $j = json_encode($resource);
+        //  dd($j);
+        $response = $client->request('GET', 'GetApplicationDetails', ['headers' => ['Content-Type' => 'application/json'],'body' => $j]);
+        
+        $body = $response->getBody()->getContents();
+        $stringBody = (string) $body;
+        // $_content = json_decode($stringBody);
+       // $_content = json_encode($stringBody,true);
+        // dd($body);
+        $jsondecodems = json_decode($stringBody);
+        // dd($jsondecodems);
+
+        return $jsondecodems;
+        // return  $_content ;
+       // return new ApiResource($_content);
+        }
+
+        catch(\Exception $e)
+        {
+            return $e->getMessage();
+        }
         
     }
 
     public function getOBD(&$jsondecodeobd,$id)
     {
         $caserefno = $id;
-        $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetOBDetails?caserefno='.$caserefno;
+        // $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetOBDetails?caserefno='.$caserefno;
                           
 
         //  return $url;
 
-        $ch = curl_init();
+        // $ch = curl_init();
         
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_PROXY, '');
+        // curl_setopt($ch, CURLOPT_URL, $url);
+        // curl_setopt($ch, CURLOPT_PROXY, '');
         
-        curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
+        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($ch);
+        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // $result = curl_exec($ch);
         // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        curl_close($ch);
-        $jsondecodeobd = json_decode($result);
+        // curl_close($ch);
+        // $jsondecodeobd = json_decode($result);
 
         //  return $jsondecodeobd;
         //close connection
         // dd($url);
+
+        try {
+            $client = new Client([
+                // Base URI is used with relative requests
+                'base_uri' => env('WS_IP', 'localhost').'/api/wsmotion/',
+                // You can set any number of default request options.
+                'timeout'  => 2.0,
+            ]);
+            
+            $response = $client->request('GET', 'GetOBDetails', ['headers' => ['Content-Type' => 'application/json'],'body' => $j]);
+            $body = $response->getBody()->getContents();
+            $stringBody = (string) $body;
+
+            $jsondecodeobd = json_decode($stringBody);
+
+            return $jsondecodeobd;
+            }
+            catch(\Exception $e)
+        {
+            return $e->getMessage();
+        }
+
+
     }
     public function getEmployer(&$jsondecodeed,$id)
     {
         $caserefno = $id;
-        $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetEmployeeDetails?caserefno='.$caserefno;
+        // $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetEmployeeDetails?caserefno='.$caserefno;
                           
 
         //  return $url;
 
-        $ch = curl_init();
+        // $ch = curl_init();
         
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_PROXY, '');
+        // curl_setopt($ch, CURLOPT_URL, $url);
+        // curl_setopt($ch, CURLOPT_PROXY, '');
         
-        curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
+        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($ch);
+        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // $result = curl_exec($ch);
         // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        curl_close($ch);
-        $jsondecodeed = json_decode($result);
+        // curl_close($ch);
+        // $jsondecodeed = json_decode($result);
 
         //  return $jsondecodeobd;
         //close connection
         // dd($url);
+
+        try {
+            $client = new Client([
+                // Base URI is used with relative requests
+                'base_uri' => env('WS_IP', 'localhost').'/api/wsmotion/',
+                // You can set any number of default request options.
+                'timeout'  => 2.0,
+            ]);
+            
+            $response = $client->request('GET', 'GetEmployeeDetails', ['headers' => ['Content-Type' => 'application/json'],'body' => $j]);
+            $body = $response->getBody()->getContents();
+            $stringBody = (string) $body;
+
+            $jsondecodeed = json_decode($stringBody);
+
+            return $jsondecodeed;
+            }
+            catch(\Exception $e)
+        {
+            return $e->getMessage();
+        }
     }
 
     public function getAcc(&$jsondecodeacc,$id)
     {
         $caserefno = $id;
-        $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetAccNoticeDetails?caserefno='.$caserefno;
+        // $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetAccNoticeDetails?caserefno='.$caserefno;
                           
 
         //  return $url;
 
-        $ch = curl_init();
+        // $ch = curl_init();
         
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_PROXY, '');
+        // curl_setopt($ch, CURLOPT_URL, $url);
+        // curl_setopt($ch, CURLOPT_PROXY, '');
         
-        curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
+        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($ch);
+        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // $result = curl_exec($ch);
         // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        curl_close($ch);
-        $jsondecodeacc = json_decode($result);
+        // curl_close($ch);
+        // $jsondecodeacc = json_decode($result);
 
         //  return $jsondecodeobd;
         //close connection
         // dd($url);
+
+        try {
+            $client = new Client([
+                // Base URI is used with relative requests
+                'base_uri' => env('WS_IP', 'localhost').'/api/wsmotion/',
+                // You can set any number of default request options.
+                'timeout'  => 2.0,
+            ]);
+            
+            $response = $client->request('GET', 'GetAccNoticeDetails', ['headers' => ['Content-Type' => 'application/json'],'body' => $j]);
+            $body = $response->getBody()->getContents();
+            $stringBody = (string) $body;
+
+            $jsondecodeacc = json_decode($stringBody);
+
+            return $jsondecodeacc;
+            }
+            catch(\Exception $e)
+        {
+            return $e->getMessage();
+        }
     }
 
     public function getSDN(&$jsondecodeSDN,$id)
     {
         $caserefno = $id;
-        $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetSDNoticeDetails?caserefno='.$caserefno;
+        // $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetSDNoticeDetails?caserefno='.$caserefno;
                           
 
         //  return $url;
 
-        $ch = curl_init();
+        // $ch = curl_init();
         
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_PROXY, '');
+        // curl_setopt($ch, CURLOPT_URL, $url);
+        // curl_setopt($ch, CURLOPT_PROXY, '');
         
-        curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
+        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($ch);
+        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // $result = curl_exec($ch);
         // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        curl_close($ch);
-        $jsondecodeSDN = json_decode($result);
+        // curl_close($ch);
+        // $jsondecodeSDN = json_decode($result);
 
         //  return $jsondecodeobd;
         //close connection
         // dd($url);
+
+        try {
+            $client = new Client([
+                // Base URI is used with relative requests
+                'base_uri' => env('WS_IP', 'localhost').'/api/wsmotion/',
+                // You can set any number of default request options.
+                'timeout'  => 2.0,
+            ]);
+            
+            $response = $client->request('GET', 'GetSDNoticeDetails', ['headers' => ['Content-Type' => 'application/json'],'body' => $j]);
+            $body = $response->getBody()->getContents();
+            $stringBody = (string) $body;
+
+            $jsondecodeSDN = json_decode($stringBody);
+
+            return $jsondecodeSDN;
+            }
+            catch(\Exception $e)
+        {
+            return $e->getMessage();
+        }
     }
     public function getIlat(&$jsondecodeIlat,$id)
     {
         $caserefno = $id;
-        $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetILATDetails?caserefno='.$caserefno;
+        // $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetILATDetails?caserefno='.$caserefno;
                           
 
         //  return $url;
 
-        $ch = curl_init();
+        // $ch = curl_init();
         
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_PROXY, '');
+        // curl_setopt($ch, CURLOPT_URL, $url);
+        // curl_setopt($ch, CURLOPT_PROXY, '');
         
-        curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
+        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($ch);
+        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // $result = curl_exec($ch);
         // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        curl_close($ch);
-        $jsondecodeIlat = json_decode($result);
+        // curl_close($ch);
+        // $jsondecodeIlat = json_decode($result);
 
         //  return $jsondecodeobd;
         //close connection
         // dd($url);
+
+        try {
+            $client = new Client([
+                // Base URI is used with relative requests
+                'base_uri' => env('WS_IP', 'localhost').'/api/wsmotion/',
+                // You can set any number of default request options.
+                'timeout'  => 2.0,
+            ]);
+            
+            $response = $client->request('GET', 'GetILATDetails', ['headers' => ['Content-Type' => 'application/json'],'body' => $j]);
+            $body = $response->getBody()->getContents();
+            $stringBody = (string) $body;
+
+            $jsondecodeIlat = json_decode($stringBody);
+
+            return $jsondecodeIlat;
+            }
+            catch(\Exception $e)
+        {
+            return $e->getMessage();
+        }
     }
     public function getDDetails(&$jsondecodeddetails,$id)
     {
@@ -297,53 +441,96 @@ class AccidentController extends Controller
 
         //  return $url;
 
-        $ch = curl_init();
+        // $ch = curl_init();
         
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_PROXY, '');
+        // curl_setopt($ch, CURLOPT_URL, $url);
+        // curl_setopt($ch, CURLOPT_PROXY, '');
         
-        curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
+        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($ch);
+        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // $result = curl_exec($ch);
         // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        curl_close($ch);
-        $jsondecodeddetails = json_decode($result);
+        // curl_close($ch);
+        // $jsondecodeddetails = json_decode($result);
 
         //  return $jsondecodeobd;
         //close connection
         // dd($url);
+
+        try {
+            $client = new Client([
+                // Base URI is used with relative requests
+                'base_uri' => env('WS_IP', 'localhost').'/api/wsmotion/',
+                // You can set any number of default request options.
+                'timeout'  => 2.0,
+            ]);
+            
+            $response = $client->request('GET', 'GetDeathDetails', ['headers' => ['Content-Type' => 'application/json'],'body' => $j]);
+            $body = $response->getBody()->getContents();
+            $stringBody = (string) $body;
+
+            $jsondecodeddetails = json_decode($stringBody);
+
+            return $jsondecodeddetails;
+            }
+            catch(\Exception $e)
+        {
+            return $e->getMessage();
+        }
     }
 
 
     public function getMCD(&$jsondecodeMCD,$id)
     {
         $caserefno = $id;
-        $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetMCDetails?caserefno='.$caserefno;
+        // $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetMCDetails?caserefno='.$caserefno;
                           
 
         //  return $url;
 
-        $ch = curl_init();
+        // $ch = curl_init();
         
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_PROXY, '');
+        // curl_setopt($ch, CURLOPT_URL, $url);
+        // curl_setopt($ch, CURLOPT_PROXY, '');
         
-        curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
+        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($ch);
+        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // $result = curl_exec($ch);
         // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        curl_close($ch);
-        $jsondecodeMCD = json_decode($result);
+        // curl_close($ch);
+        // $jsondecodeMCD = json_decode($result);
 
         //  return $jsondecodeobd;
         //close connection
         // dd($url);
+
+        try {
+            $client = new Client([
+                // Base URI is used with relative requests
+                'base_uri' => env('WS_IP', 'localhost').'/api/wsmotion/',
+                // You can set any number of default request options.
+                'timeout'  => 2.0,
+            ]);
+            
+            $response = $client->request('GET', 'GetMCDetails', ['headers' => ['Content-Type' => 'application/json'],'body' => $j]);
+            $body = $response->getBody()->getContents();
+            $stringBody = (string) $body;
+
+            $jsondecodeMCD = json_decode($stringBody);
+
+            return $jsondecodeMCD;
+            }
+            catch(\Exception $e)
+        {
+            return $e->getMessage();
+        }
+        
     }
     
     /**
@@ -356,60 +543,100 @@ class AccidentController extends Controller
     public function getFcase(&$jsondecodeFcase,$id)
     {
         $caserefno = $id;
-        $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetFactCaseInfo?caserefno='.$caserefno;
+        // $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetFactCaseInfo?caserefno='.$caserefno;
                           
 
         //  return $url;
 
-        $ch = curl_init();
+        // $ch = curl_init();
         
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_PROXY, '');
+        // curl_setopt($ch, CURLOPT_URL, $url);
+        // curl_setopt($ch, CURLOPT_PROXY, '');
         
-        curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
+        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($ch);
+        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // $result = curl_exec($ch);
         // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        curl_close($ch);
-        $jsondecodeFcase = json_decode($result);
+        // curl_close($ch);
+        // $jsondecodeFcase = json_decode($result);
 
         //  return $jsondecodeobd;
         //close connection
         // dd($url);
+        
+        try {
+            $client = new Client([
+                // Base URI is used with relative requests
+                'base_uri' => env('WS_IP', 'localhost').'/api/wsmotion/',
+                // You can set any number of default request options.
+                'timeout'  => 2.0,
+            ]);
+            
+            $response = $client->request('GET', 'GetFactCaseInfo', ['headers' => ['Content-Type' => 'application/json'],'body' => $j]);
+            $body = $response->getBody()->getContents();
+            $stringBody = (string) $body;
 
+            $jsondecodeFcase = json_decode($stringBody);
+
+            return $jsondecodeFcase;
+            }
+            catch(\Exception $e)
+        {
+            return $e->getMessage();
+        }
 
         
     }
     public function getcurrentCase(&$jsondecodecurrentC,$id)
     {
         $caserefno = $id;
-        $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetCurrentCaseDetails?caserefno='.$caserefno;
+        // $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetCurrentCaseDetails?caserefno='.$caserefno;
                           
 
         //  return $url;
 
-        $ch = curl_init();
+        // $ch = curl_init();
         
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_PROXY, '');
+        // curl_setopt($ch, CURLOPT_URL, $url);
+        // curl_setopt($ch, CURLOPT_PROXY, '');
         
-        curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
+        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($ch);
+        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // $result = curl_exec($ch);
         // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        curl_close($ch);
-        $jsondecodecurrentC = json_decode($result);
+        // curl_close($ch);
+        // $jsondecodecurrentC = json_decode($result);
 
         //  return $jsondecodeobd;
         //close connection
         // dd($url);
 
+        try {
+            $client = new Client([
+                // Base URI is used with relative requests
+                'base_uri' => env('WS_IP', 'localhost').'/api/wsmotion/',
+                // You can set any number of default request options.
+                'timeout'  => 2.0,
+            ]);
+            
+            $response = $client->request('GET', 'GetCurrentCaseDetails', ['headers' => ['Content-Type' => 'application/json'],'body' => $j]);
+            $body = $response->getBody()->getContents();
+            $stringBody = (string) $body;
+
+            $jsondecodecurrentC = json_decode($stringBody);
+
+            return $jsondecodecurrentC;
+            }
+            catch(\Exception $e)
+        {
+            return $e->getMessage();
+        }
 
         
     }

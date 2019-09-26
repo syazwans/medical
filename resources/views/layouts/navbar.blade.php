@@ -72,11 +72,23 @@
                 <li><a href="/abppp">@lang('ABPPP')</a></li>
 
             </ul>
+            @elseif(Session::get('loginrole')=='aobppp')
+            <li><a  class=" waves-dark fcolor" href="/home_aobppp"><i class="icon-home"></i>@lang('Medical Services')</a>
+            <ul aria-expanded="false" class="collapse">
+                <li><a href="/aobppp">@lang('AOBPPP')</a></li>
+
+            </ul>
+            @elseif(Session::get('loginrole')=='acpp')
+            <li><a  class=" waves-dark fcolor" href="/home_acpp"><i class="icon-home"></i>@lang('Medical Services')</a>
+            <ul aria-expanded="false" class="collapse">
+                <li><a href="/acpp">@lang('ACPP')</a></li>
+
+            </ul>
         </li>
             @elseif(Session::get('loginrole')=='MOHUK')
             <li><a  class="waves-effect waves-dark fcolor" href="/home_mohuk"><i class="icon-home"></i>@lang('Medical Services')</a></li>
 
-            @elseif(Session::get('loginrole')=='MOEI')
+            @elseif(Session::get('loginrole')=='moei')
             <li><a class=" waves-dark fcolor" href="/home"><i class="icon-home"></i>@lang('navbar.home')</a></li>
             <li> <a class=" waves-dark fcolor" href="/home_moei" aria-expanded="false"><span class="hide-menu">@lang('Medical Services')</span></a>
                 <ul aria-expanded="false" class="collapse">
