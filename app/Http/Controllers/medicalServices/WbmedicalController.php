@@ -72,6 +72,7 @@ class WbmedicalController extends Controller
         //close connection
         // dd($url);
         
+        
     }
 
 

@@ -74,6 +74,12 @@ elseif (Session :: get  ('loginrole')=='MOEI' || Session :: get  ('loginrole')==
 return redirect('/home_moei');
 elseif (Session :: get  ('loginrole')=='abppp')
 return redirect('/home_abppp');
+elseif (Session :: get  ('loginrole')=='aobppp')
+return redirect('/home_aobppp');
+elseif (Session :: get  ('loginrole')=='acpp')
+return redirect('/home_acpp');
+elseif (Session :: get  ('loginrole')=='aocpp')
+return redirect('/home_aocpp');
 else
 return redirect('/home');
 
