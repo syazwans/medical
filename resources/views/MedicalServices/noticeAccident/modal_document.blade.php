@@ -126,7 +126,7 @@
                 <div class="modal-footer">
                     <div class="align-self-center text-left">
                     <button type="button" class="btn btn waves-effect waves-light btn-danger" data-dismiss="modal">@lang('medical_board/modal.cancel')</button></div>
-                    <button type="submit" class="btn btn waves-effect waves-light btn-success"><i class="fa fa-check"></i> @lang('medical_board/modal.save')</button>
+                    <button type="button" id="submitModal" class="btn btn waves-effect waves-light btn-success"><i class="fa fa-check"></i> @lang('medical_board/modal.save')</button>
                 </div>
                     </form>
                 </div>

@@ -36,3 +36,4 @@
     <link href="/PERKESO_UI/assets/node_modules/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
 
 <link href="{{ asset('/css/overrides.css') }}" rel="stylesheet" type="text/css" />
+
