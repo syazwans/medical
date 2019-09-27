@@ -211,6 +211,76 @@
                         <td><a href="/information" id="status"><span class="label label-info">New</span></a></td>
                         @endif --}}
                     </tbody>
+                    <tbody>
+
+
+                       @foreach ($wbmedical as $wbms) 
+                       @isset($wbms->msrefno)
+                        
+                        <tr>
+                        <td><a id='selectdraft' href='/information?caserefno={{$wbms->caserefno}}&casetype={{$wbms->casetype}}&schemerefno={{$wbms->schemerefno}}'><i class="fas fa-edit"></i></a></td>
+                            {{-- <td><a id='selectdraft' href='/information/{{ $wbms->caserefno }}'><i class="fas fa-edit"></i></a></td> --}}
+                            <td><a id="deletedraft" onclick="return confirm('Are you sure want to delete the draft?');" ><i class="fas fa-trash-alt fa-sm"></i></a></td>
+                            <td>{{ $wbms->msrefno }}</td>
+                            <td>{{ $wbms->name }}</td>
+                            <td>{{ $wbms->idno }}</td>
+                            <td>{{ $wbms->schemerefno }}</td> 
+                            <td>{{ $wbms->taskcode }}</td>
+                            <td>{{ $wbms->brname }}</td>
+                            <td>{{ $wbms->casetype }}</td>
+                            <td><?php 
+                                $medical = DateTime::createFromFormat('Ymd', ($wbms->date));
+                                $currdate = new DateTime();
+                                $difference = $currdate->diff($medical);
+                                echo ($difference->d);
+                                ?></td>
+                            <td>{{substr($wbms->date,6,2)}}-{{substr($wbms->date,4,2)}}-{{substr($wbms->date,0,4)}}</td>
+                            <td>{{ $wbms->status }}</td>
+                            
+                            
+                        </tr>
+                        @endisset
+                         @endforeach 
+                         {{-- <tr>
+                                        <td>ddd</td>
+                                        <td>{{ $wbms->name }}</td>
+                        <td>{{ $wbms->idno }}</td>
+                        <td>{{ $wbms->caserefno }}</td>
+                        <td>{{ $wbms->taskcode }}</td>
+                        <td>{{ $wbms->brname }}</td>
+                        <td>{{ $wbms->casetype }}</td>
+                        <td>{{ $wbms->status }}</td>
+                        <td>{{substr($wbms->date,6,2)}}-{{substr($wbms->date,4,2)}}-{{substr($wbms->date,0,4)}}
+                        </td>
+                        </tr> --}}
+
+
+                        {{-- @if(!empty($msrefno))
+                        <td>{{ $wbmedical->msrefno }}</td>
+                        <td>{{ $wbmedical->name }}</td>
+                        <td>{{ $wbmedical->idno }}</td>
+                        <td>{{ $wbmedical->caserefno }}</td>
+                        <td>{{ $wbmedical->taskcode }}</td>
+                        <td>{{ $wbmedical->brname }}</td>
+                        <td>{{ $wbmedical->casetype }}</td>
+                        <td>{{ $wbmedical->status }}</td>
+                        <td>{{substr($wbmedical->date,6,2)}}-{{substr($wbmedical->date,4,2)}}-{{substr($wbmedical->date,0,4)}}
+                        </td>
+                        <td><a href="/information" id="status"><span class="label label-info">New</span></a></td>
+                        @else
+
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="/information" id="status"><span class="label label-info">New</span></a></td>
+                        @endif --}}
+                    </tbody>
                 </table>
             </div>
         </div>

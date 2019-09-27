@@ -25,7 +25,8 @@ class AppdetailsController extends Controller
         }
         //  $caserefno= session('caserefno');
         $caserefno = $req ->query('caserefno');
-        $casetype = $req  ->query('casetype');
+        $casetype = 'Invalidity';
+        // $casetype = $req  ->query('casetype');
         $schemerefno = $req ->query('schemerefno');
         // return $schemerefno;
         session(['caserefno'=>$caserefno]);
@@ -37,7 +38,11 @@ class AppdetailsController extends Controller
         {
             return redirect('/noticeAccident');
         }
-        else{
+        else if ($casetype=='Invalidity'){
+            return redirect('/Ilat');
+        }
+        else {
+           
             return redirect('/Medicallola');
         }
         //  ,'OBdetails'=>$OBdetails,'Empdetails'=>$Empdetails,'Accdetails'=>$Accdetails,'SDNotice'=>$SDNotice,'Ilatdetails'=>$Ilatdetails,'Ddetails'=>$Ddetails,'MCDetails'=>$MCDetails,'calculateAge'=>$calculateAge
