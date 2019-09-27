@@ -124,93 +124,152 @@
                 <table id="myTable"  class="table table-bordered table-striped">
                     <thead style="background-color:skyblue;">
                         <tr>
-                            <th>Select</th>
-                            <th>Delete</th>
-                            <th>Ref. No.</th>
-                            <th>Name</th>
-                            <th>Id No.</th>
-                            <th>Scheme Ref. No.</th>
-                            <th>Task Code</th>
-                            <th>Branch Name</th>
-                            <th>Notice Type</th>
-                            <th>Aging</th>
+                            <th>No.</th>
                             <th>Date</th>
-                            <th>Status</th>
+                            <th>Aging</th>
+                            <th>Module</th>
+                            <th>Source</th>
+                            <th>Reference No.</th>
+                            <th>ID No.</th>
+                            <th>Notice Type</th>
+                            <th>Description</th>
+                            <th>Task Status</th>
+                            <th>Action</th>
                             
                             
                         </tr>
                         </tr>
                     </thead>
                     <tbody>
-
-
-                       @foreach ($wbmedical as $wbms) 
-                       @isset($wbms->msrefno)
-                        
-                        <tr>
-                        <td><a id='selectdraft' href='/information?caserefno={{$wbms->caserefno}}&casetype={{$wbms->casetype}}&schemerefno={{$wbms->schemerefno}}'><i class="fas fa-edit"></i></a></td>
-                            {{-- <td><a id='selectdraft' href='/information/{{ $wbms->caserefno }}'><i class="fas fa-edit"></i></a></td> --}}
-                            <td><a id="deletedraft" onclick="return confirm('Are you sure want to delete the draft?');" ><i class="fas fa-trash-alt fa-sm"></i></a></td>
-                            <td>{{ $wbms->msrefno }}</td>
-                            <td>{{ $wbms->name }}</td>
-                            <td>{{ $wbms->idno }}</td>
-                            <td>{{ $wbms->schemerefno }}</td> 
-                            <td>{{ $wbms->taskcode }}</td>
-                            <td>{{ $wbms->brname }}</td>
-                            <td>{{ $wbms->casetype }}</td>
-                            <td><?php 
-                                $medical = DateTime::createFromFormat('Ymd', ($wbms->date));
-                                $currdate = new DateTime();
-                                $difference = $currdate->diff($medical);
-                                echo ($difference->d);
-                                ?></td>
-                            <td>{{substr($wbms->date,6,2)}}-{{substr($wbms->date,4,2)}}-{{substr($wbms->date,0,4)}}</td>
-                            <td>{{ $wbms->status }}</td>
-                            
-                            
-                        </tr>
-                        @endisset
-                         @endforeach 
-                         {{-- <tr>
-                                        <td>ddd</td>
-                                        <td>{{ $wbms->name }}</td>
-                        <td>{{ $wbms->idno }}</td>
-                        <td>{{ $wbms->caserefno }}</td>
-                        <td>{{ $wbms->taskcode }}</td>
-                        <td>{{ $wbms->brname }}</td>
-                        <td>{{ $wbms->casetype }}</td>
-                        <td>{{ $wbms->status }}</td>
-                        <td>{{substr($wbms->date,6,2)}}-{{substr($wbms->date,4,2)}}-{{substr($wbms->date,0,4)}}
-                        </td>
-                        </tr> --}}
-
-
-                        {{-- @if(!empty($msrefno))
-                        <td>{{ $wbmedical->msrefno }}</td>
-                        <td>{{ $wbmedical->name }}</td>
-                        <td>{{ $wbmedical->idno }}</td>
-                        <td>{{ $wbmedical->caserefno }}</td>
-                        <td>{{ $wbmedical->taskcode }}</td>
-                        <td>{{ $wbmedical->brname }}</td>
-                        <td>{{ $wbmedical->casetype }}</td>
-                        <td>{{ $wbmedical->status }}</td>
-                        <td>{{substr($wbmedical->date,6,2)}}-{{substr($wbmedical->date,4,2)}}-{{substr($wbmedical->date,0,4)}}
-                        </td>
-                        <td><a href="/information" id="status"><span class="label label-info">New</span></a></td>
-                        @else
-
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="/information" id="status"><span class="label label-info">New</span></a></td>
-                        @endif --}}
-                    </tbody>
+                        <td>1</td>
+                        <td>29/8/2019</td>
+                        <td>3</td>
+                        <td>Medical Service</td>
+                        <td>Medical Board</td>
+                        <td>EI001/19</td>
+                        <td>800920145344</td>
+                        <td>Accident</td>
+                        <td>Medical Opinion</td>
+                        <td>New</td>
+                        <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                     </tbody>
+                     <tbody>
+                            <td>2</td>
+                            <td>22/11/2020</td>
+                            <td>4</td>
+                            <td>Medical Service</td>
+                            <td>Medical Board</td>
+                            <td>EI001/19</td>
+                            <td>800920145344</td>
+                            <td>Invalidity</td>
+                            <td>Medical Opinion</td>
+                            <td>New</td>
+                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                         </tbody>
+                         <tbody>
+                            <td>3</td>
+                            <td>22/9/2020</td>
+                            <td>2</td>
+                            <td>Medical Service</td>
+                            <td>Medical Board</td>
+                            <td>EI001/19</td>
+                            <td>800920145344</td>
+                            <td>Occupational Disease</td>
+                            <td>Medical Opinion</td>
+                            <td>New</td>
+                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                        </tbody>
+                        <tbody>
+                            <td>4</td>
+                            <td>9/9/2020</td>
+                            <td>4</td>
+                            <td>Medical Service</td>
+                            <td>Medical Board</td>
+                            <td>EI001/19</td>
+                            <td>800920145344</td>
+                            <td>Accident/td>
+                            <td>Medical Opinion</td>
+                            <td>New</td>
+                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                        </tbody>
+                        <tbody>
+                            <td>5</td>
+                            <td>21/9/2020</td>
+                            <td>2</td>
+                            <td>Medical Service</td>
+                            <td>Medical Board</td>
+                            <td>EI001/19</td>
+                            <td>800920145344</td>
+                            <td>Occupational Disease</td>
+                            <td>Medical Investigation Internal</td>
+                            <td>New</td>
+                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                        </tbody>
+                        <tbody>
+                            <td>6</td>
+                            <td>11/2/2020</td>
+                            <td>2</td>
+                            <td>Medical Service</td>
+                            <td>Medical Board</td>
+                            <td>EI001/19</td>
+                            <td>800920145344</td>
+                            <td>Occupational Disease</td>
+                            <td>Medical Investigation Internal</td>
+                            <td>New</td>
+                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                        </tbody>
+                        <tbody>
+                            <td>7</td>
+                            <td>1/6/2020</td>
+                            <td>5</td>
+                            <td>Medical Service</td>
+                            <td>Medical Board</td>
+                            <td>EI001/19</td>
+                            <td>800920145344</td>
+                            <td>Occupational Disease</td>
+                            <td>Medical Investigation Special Report</td>
+                            <td>New</td>
+                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                        </tbody>
+                        <tbody>
+                            <td>8</td>
+                            <td>9/6/2020</td>
+                            <td>4</td>
+                            <td>Medical Service</td>
+                            <td>Medical Board</td>
+                            <td>EI001/19</td>
+                            <td>800920145344</td>
+                            <td>Occupational Disease</td>
+                            <td>Medical Investigation Special Report</td>
+                            <td>New</td>
+                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                        </tbody>
+                        <tbody>
+                            <td>9</td>
+                            <td>2/6/2020</td>
+                            <td>4</td>
+                            <td>Medical Service</td>
+                            <td>Medical Board</td>
+                            <td>EI001/19</td>
+                            <td>800920145344</td>
+                            <td>Occupational Disease</td>
+                            <td>Medical Investigation Clarification/td>
+                            <td>New</td>
+                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                        </tbody>
+                        <tbody>
+                            <td>10</td>
+                            <td>9/3/2020</td>
+                            <td>4</td>
+                            <td>Medical Service</td>
+                            <td>Medical Board</td>
+                            <td>EI001/19</td>
+                            <td>800920145344</td>
+                            <td>Occupational Disease</td>
+                            <td>Medical Investigation Clarification</td>
+                            <td>New</td>
+                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                        </tbody>
                 </table>
             </div>
         </div>
