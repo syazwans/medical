@@ -151,7 +151,7 @@
                         <td>Accident</td>
                         <td>Medical Opinion</td>
                         <td>New</td>
-                        <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                    <td><a id='selectdraft' href="{{route ('accident')}}"><i class="fas fa-edit"></i></a></td>
                      </tbody>
                      <tbody>
                             <td>2</td>
@@ -164,7 +164,7 @@
                             <td>Invalidity</td>
                             <td>Medical Opinion</td>
                             <td>New</td>
-                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                            <td><a id='selectdraft' href="{{route ('invadility')}}"><i class="fas fa-edit"></i></a></td>
                          </tbody>
                          <tbody>
                             <td>3</td>
@@ -177,7 +177,7 @@
                             <td>Occupational Disease</td>
                             <td>Medical Opinion</td>
                             <td>New</td>
-                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                            <td><a id='selectdraft' href="{{route ('od')}}"><i class="fas fa-edit"></i></a></td>
                         </tbody>
                         <tbody>
                             <td>4</td>
@@ -187,10 +187,10 @@
                             <td>Medical Board</td>
                             <td>EI001/19</td>
                             <td>800920145344</td>
-                            <td>Accident/td>
+                            <td>Accident</td>
                             <td>Medical Opinion</td>
                             <td>New</td>
-                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                            <td><a id='selectdraft' href="/abppp"><i class="fas fa-edit"></i></a></td>
                         </tbody>
                         <tbody>
                             <td>5</td>

@@ -14,7 +14,7 @@ class OdController extends Controller
      */
     public function index()
     {
-        return view('MedicalServices.OD.index');
+        return view('MedicalServices.OD.od_information');
     }
 
     /**

@@ -239,3 +239,10 @@ Route::get('/index', function () {
 Route::get('/index', function () {  
     return view('MedicalServices.AOCPP.index');
 });
+
+
+
+
+Route::get('/accident', 'medicalServices\AccidentController@index')->name('accident');
+Route::get('/invadility', 'medicalServices\IlatController@index')->name('invadility');
+Route::get('/od', 'medicalServices\OdController@index')->name('od');

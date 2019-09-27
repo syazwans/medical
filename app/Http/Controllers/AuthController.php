@@ -69,8 +69,8 @@ session(['loginsignonsts' => $result->signonsts]);
 if(session('loginrole') == 'ROLOSMB' || session('loginrole') == 'ROLOMB' || session('loginrole') == 'ROLOMAB' || session('loginrole') == 'ROLOSMAB' || session('loginrole') == 'ROMABHQ')
 return redirect('/medical/home');
 else if (Session :: get  ('loginrole')=='MOHUK' || Session :: get  ('loginrole')=='MOILAT'  )
-return redirect('/home_mohuk');
-elseif (Session :: get  ('loginrole')=='MOEI' || Session :: get  ('loginrole')=='MOINV'  )
+return redirect('/home_moei');
+elseif (Session :: get  ('loginrole')=='moei' || Session :: get  ('loginrole')=='moinv'  )
 return redirect('/home_moei');
 elseif (Session :: get  ('loginrole')=='abppp')
 return redirect('/home_abppp');
