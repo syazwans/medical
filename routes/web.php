@@ -218,6 +218,7 @@ Route::get('/home_aocpp', 'medicalServices\WbmedicalController@index');
 
 Route::get('/noticeAccident', 'medicalServices\AccidentController8@index');
 Route::get('/noticeOd', 'medicalServices\OdController@index');
+Route::get('/Ilat', 'medicalServices\IlatController@index');
 
 
 Route::get('/newcase', function () {

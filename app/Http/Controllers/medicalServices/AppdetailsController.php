@@ -27,6 +27,7 @@ class AppdetailsController extends Controller
         $caserefno = $req ->query('caserefno');
         // $casetype = $req  ->query('casetype');
         $casetype =  'Occupational Diesease';
+        $casetype =  'Invalidity';
 
         $schemerefno = $req ->query('schemerefno');
         // return $schemerefno;
@@ -44,7 +45,12 @@ class AppdetailsController extends Controller
             return redirect('/noticeOd');
         }
 
-        else{
+        
+        else if ($casetype=='Invalidity'){
+            return redirect('/Ilat');
+        }
+        else {
+           
             return redirect('/Medicallola');
         }
         //  ,'OBdetails'=>$OBdetails,'Empdetails'=>$Empdetails,'Accdetails'=>$Accdetails,'SDNotice'=>$SDNotice,'Ilatdetails'=>$Ilatdetails,'Ddetails'=>$Ddetails,'MCDetails'=>$MCDetails,'calculateAge'=>$calculateAge

@@ -99,6 +99,7 @@
  <!-- end - This is for export functionality only -->
 
  <script src="/PERKESO_UI/assets/node_modules/sweetalert/jquery.sweet-alert.custom.js"></script>
+ 
 
 <script>
     $(document).ready(function(){
@@ -360,17 +361,80 @@ $("#btn_diagnosis").click(function () {
 
     $("#btn_query").click(function () {
         var no = $('#myTable_query tr:last td:first').find("input").val();
+        // var no = 1;
         var delete1 = "('Are you sure want to delete the draft?')";
         no++;
         // var no = no++;
-        $('#myTable_query > tbody:last-child').append('<tr id="clari'+no+'"> <td style="display:none;"><input type="hidden" value="'+no+'"></td><td>'+no+'</td> <td><input type="text" value="" class="form-control"></td> <td></td><td></td> <td><a class="btn btn-sm btn-danger"  id="deletedraft'+no+'" confirm('+delete1+'); ><i class="fas fa-trash-alt fa-sm"></i></a></td> </tr>');
-        $('#deletedraft'+no+'').click(function(){
-            alert('Are you sure want to delete the draft? ');
+        $('#myTable_query > tbody:last-child').append('<tr id="clari'+no+'"> <td style="display:none;"><input type="hidden" value="'+no+'"></td><td>'+no+'</td> <td>'+
+                                                '<div class="dropdown">'+
+                                                '<button class="btn btn-default dropdown-toggle middle" type="button" id="dropdownMenu'+no+'" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Please Select<span class="caret"></span></button>'+
+                                               ' <div class="dropdown-menu" style="width:300px;" aria-labelledby="dropdownMenu1">'+
+                                                ' <a href="#" value="emp_ob">Employer/OB</a>'+
+                                                 '<br>'+
+                                                 '<a href="#" value="emp_ob">Scheme</a>'+
+                                                ' <br>'+
+                                                '<a href="#" value="emp_ob">RTW</a>'+
+                                                '<br>'+
+                                                '<a href="#" value="emp_ob">Medical Investigation-Perkeso Doctor</a>'+
+                                                '<br>'+
+                                                '<a href="#" value="emp_ob">Medical Investigation-Special Report</a>'+
+                                                '<br>'+
+                                               ' <a href="#" data-toggle="modal" data-target="#medicalOpinionModal">Medical Investigation- Medical Clarification</a>'+
+                                                 '</div>'+
+                                                ' <td><div class="input-group-append">'+
+                                               ' <span class="input-group-text" style="background-color: #d8e8e9;"><a class="get-code" data-toggle="modal"'+
+                                                'data-target="#modal_document" data-id="'+no+'" data-whatever="@getbootstrap"'+
+                                               ' href="#tt'+no+'" aria-expanded="true"><i class="fas fa-file-alt"title="Request Document" data-toggle="tooltip"></i></a></span>'+
+                                                '</div>'+
+                                                '<p id="requestDoc'+no+'"></p></td>'+
+                                                ' </div></td><td></td> <td><a class="btn btn-sm btn-danger"  id="deletedraft'+no+'" confirm('+delete1+'); ><i class="fas fa-trash-alt fa-sm"></i></a></td> </tr>');
+                                           
+                                                      
 
-            $('#myTable_query').each(function(){
-            $('#clari'+no+'').remove();
-        });
-        });
+                                        // if(no>0){
+                                        //     $(document).ready(function() {
+                                                            
+                                        //                     $('#modal_document').on('show.bs.modal',function(e){
+                                        //                     // var number=$(e.relatedTarget).data('id');
+                                        //                     // console.log(number);
+                                        //                     $("#submitModal").click(function() {
+                                        //                         var fav1 = [];
+    
+                                                                
+    
+                                        //                             $.each($("input[name='medical_report']:checked"), function() {
+                                        //                                 fav1.push($(this).val());
+                                        //                             });
+                                        //                             $("#requestDoc"+no).html(fav1.join(", "));
+                                                                     
+    
+                                        //                         // fav1 = [];
+                                        //                         });
+                                        //                         $('#modal_document').on('hide.modal',function(e){
+                                        //                                 $("input[name='medical_report']").prop("checked", false);
+                                        //                                 fav1 = [];
+                                        //                             });
+                                        //                     });
+    
+                                        //                 // $('#modal_document').on('hide.bs.modal',function(e){
+                                                            
+                                                            
+                                                            
+                                        //                 //     $("input[name='medical_report']").prop("checked", false);
+                                        //                 // });
+    
+    
+                                        //                 });
+                                        // }
+                                                
+                                                    
+                                                    $('#deletedraft'+no+'').click(function(){
+                                                        alert('Are you sure want to delete the draft? ');
+
+                                                        $('#myTable_query').each(function(){
+                                                        $('#clari'+no+'').remove();
+                                                    });
+                                                    });
     });
 
 
@@ -390,6 +454,36 @@ $("#btn_diagnosis").click(function () {
         });
     }); 
 
+    
+$(document).ready(function() {
+    
+        
+
+    $('#modal_document').on('show.bs.modal',function(e){
+        //    var number=$(e.relatedTarget).data('id');
+        //    console.log(number);
+        var no = $('#myTable_query tr:last td:first').find("input").val();
+
+            $("#submitModal").click(function() {
+            // var fav = 'favorite'+number;
+            var fav = [];
+
+                $.each($("input[name='medical_report']:checked"), function() {
+                    fav.push($(this).val());
+                });
+                $("#requestDoc"+no).html(fav.join(", "));
+                $('#modal_document').modal('hide');
+                no++;
+            });
+            // $('#modal_document').on('hide.bs.modal',function(e){
+            if($("input[name='medical_report']:checked").prop("checked") == false) 
+                $("input[name='medical_report']").prop("checked", false);
+                                                // });  
+    });
+    
+});
+
+
 </script>
 <script src="/PERKESO_UI/assets/node_modules/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
 <script>
@@ -398,5 +492,8 @@ jQuery('#date').datepicker({
     toggleActive: true,
     format: 'dd/mm/yyyy',
 });
+
 </script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
 
