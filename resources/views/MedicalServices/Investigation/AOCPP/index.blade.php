@@ -73,49 +73,20 @@
         <!-- Nav tabs -->
         <ul class="nav customtab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#insurdperson" role="tab">
+                <a class="nav-link" data-toggle="tab" href="#endorsements" role="tab">
                     <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
-                        class="hidden-xs-down">@lang('Insured Person Details')</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#doctor" role="tab">
-                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
-                        class="hidden-xs-down">@lang('Doctor Details')</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#document" role="tab">
-                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
-                        class="hidden-xs-down">@lang('Prepare Document')</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#invoice" role="tab">
-                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
-                        class="hidden-xs-down">@lang('Upload Invoice And Report')</span>
+                        class="hidden-xs-down">@lang('Invoice Endorsement')</span>
                 </a>
             </li>
         </ul>
         <!-- Tab panes -->
         <div class="tab-content tabcontent-border">
 
-            <div class="tab-pane p-20 active" id="insurdperson" role="tabpanel">
-                @include('MedicalServices.Investigation.ACPP.insurdperson')
+            <div class="tab-pane p-20 active" id="endorsements" role="tabpanel">
+                @include('MedicalServices.Investigation.AOCPP.endorsement')
 
             </div>
-            <div class="tab-pane p-20" id="doctor" role="tabpanel">
-                @include('MedicalServices.Investigation.ACPP.doctor')
-
-            </div>
-            <div class="tab-pane p-20" id="document" role="tabpanel">
-                @include('MedicalServices.Investigation.ACPP.document')
-
-            </div>
-            <div class="tab-pane p-20" id="invoice" role="tabpanel">
-                @include('MedicalServices.Investigation.ACPP.invoice')
-
-            </div>
+            
             
         </div>
     </div>

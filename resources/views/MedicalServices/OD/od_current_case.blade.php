@@ -81,18 +81,10 @@
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label class="control-label">@lang('Injury Description
+                                                        <label class="control-label">@lang('Occupational Disease Description
                                                             :')</label>
                                                         <textarea type="text" rows="7" class="form-control"
                                                             readonly>@isset($cCase->injurydesc) {{$cCase->injurydesc}} @endisset</textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label class="control-label">@lang('Potential HUK :')</label>
-                                                        <input type="text"
-                                                            value="@isset($cCase->hukpotential) {{$cCase->hukpotential}} @endisset"
-                                                            class="form-control" readonly>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">

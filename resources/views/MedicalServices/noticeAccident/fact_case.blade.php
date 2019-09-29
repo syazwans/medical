@@ -54,6 +54,14 @@
                                                             class="form-control" readonly>
                                                     </div>
                                                 </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">@lang('Source :')</label>
+                                                        <input type="text"
+                                                            value=""
+                                                            class="form-control" readonly>
+                                                    </div>
+                                                </div>
                                                 <div class="col-md-6 offset-6">
                                                     <a class=" btn btn waves-effect waves-light btn-success a1"
                                                         data-toggle="collapse" data-target="#collapseOne1,#collapseTwo2"
@@ -192,6 +200,15 @@
                                                                                 <input type="text"
                                                                                     value=""
                                                                                     class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12">
+                                                                            <div class="form-group">
+                                                                                <div class="radio">
+                                                                                    <label><input type="radio" name="optradio" checked>Accident</label>
+                                                                               
+                                                                                    <label><input type="radio" name="optradio">Not An Accident</label>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-md-12">

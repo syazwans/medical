@@ -14,7 +14,7 @@
                                                 data-target="#appointment" aria-expanded="true">
                                                 Create
                                             </a>
-                                            @include('MedicalServices.ABPPP.modalCreateapp')
+                                            @include('MedicalServices.ABPPP.appointment.modalCreateapp')
                                             
                                         </div>
                                         <div class="col-12">

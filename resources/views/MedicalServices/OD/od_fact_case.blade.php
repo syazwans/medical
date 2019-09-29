@@ -152,7 +152,7 @@
                                                                 data-parent="#accordion1" href="#collapseTwo5"
                                                                 aria-expanded="false" aria-controls="collapseTwo5"><i
                                                                     class="fa fa-plus"></i>
-                                                                Accident Details
+                                                                    Occupational Disease Details
                                                             </a>
                                                         </h5>
                                                     </div>

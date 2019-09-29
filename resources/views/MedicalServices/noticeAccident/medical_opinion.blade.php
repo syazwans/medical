@@ -90,9 +90,6 @@
                             <div id="collapseOne111" role="tabpanel" aria-labelledby="cardt2">
                                 <div class="card-body">
                                     <div class="row p-t-20">
-                                        
-        
-        
                                             <div class="col-md-6 offset-6">
                                                 <a class="btn-success link a1" id="btn_query" data-toggle="modal"
                                                     data-whatever="@getbootstrap" aria-expanded="true">

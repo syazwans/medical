@@ -73,38 +73,40 @@
         <!-- Nav tabs -->
         <ul class="nav customtab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#minutes" role="tab">
+                <a class="nav-link" data-toggle="tab" href="#feedback" role="tab">
                     <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
-                        class="hidden-xs-down">@lang('Minutes of Meeting')</span>
+                        class="hidden-xs-down">@lang('Feedback(ABPPP)')</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#committees" role="tab"><span 
-                        class="hidden-sm-up"><i class="ti-notepad"></i></span> <span 
-                        class="hidden-xs-down">@lang('Committee')</span>
+                <a class="nav-link" data-toggle="tab" href="#query" role="tab">
+                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
+                        class="hidden-xs-down">@lang('Query')</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#appointments" role="tab"><span 
-                        class="hidden-sm-up"><i class="ti-notepad"></i></span> <span 
-                        class="hidden-xs-down">@lang('Create Appointment')</span>
-                </a>
-            </li>
+                    <a class="nav-link" data-toggle="tab" href="#feedback2" role="tab">
+                        <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
+                            class="hidden-xs-down">@lang('Feedback')</span>
+                    </a>
+                </li>
         </ul>
         <!-- Tab panes -->
         <div class="tab-content tabcontent-border">
 
-            <div class="tab-pane p-20 active" id="minutes" role="tabpanel">
-                @include('MedicalServices.ABPPP.minutes')
+            <div class="tab-pane p-20 active" id="feedback" role="tabpanel">
+                @include('MedicalServices.ABPPP.feedback')
 
             </div>
+            <div class="tab-pane p-20 " id="query" role="tabpanel">
+                @include('MedicalServices.ABPPP.query')
+
+            </div>
+            <div class="tab-pane p-20 " id="feedback2" role="tabpanel">
+                    @include('MedicalServices.ABPPP.feedback2')
+    
+                </div>
             
-            <div class="tab-pane p-20" id="committees" role="tabpanel">
-                @include('MedicalServices.ABPPP.committee')
-            </div>
-            <div class="tab-pane p-20" id="appointments" role="tabpanel">
-                @include('MedicalServices.ABPPP.createApp')
-            </div>
         </div>
     </div>
 </div>
