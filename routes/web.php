@@ -225,19 +225,22 @@ Route::get('/newcase', function () {
     return view('MedicalServices.noticeAccident.newcase');
 });
 Route::get('/abppp', function () {
-    return view('MedicalServices.ABPPP.index');
+    return view('MedicalServices.ABPPP.appointment.index');
 });
 Route::get('/index', function () {  
     return view('MedicalServices.ABPPP.index');
 });
 Route::get('/acpp', function () {
-    return view('MedicalServices.ACPP.index');
+    return view('MedicalServices.investigation.ACPP.index');
 });
-Route::get('/index', function () {  
+Route::get('/aobppp', function () {  
     return view('MedicalServices.AOBPPP.index');
 });
-Route::get('/index', function () {  
-    return view('MedicalServices.AOCPP.index');
+Route::get('/aocpp', function () {  
+    return view('MedicalServices.Investigation.AOCPP.index');
+});
+Route::get('/committee', function () {  
+    return view('MedicalServices.ABPPP.committee');
 });
 
 

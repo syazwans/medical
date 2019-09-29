@@ -70,8 +70,11 @@
             <li><a  class=" waves-dark fcolor" href="/home_abppp"><i class="icon-home"></i>@lang('Medical Services')</a>
             <ul aria-expanded="false" class="collapse">
                 <li><a href="/abppp">@lang('ABPPP')</a></li>
+                <li><a href="/committee">@lang('Committee')</a></li>
+                
 
             </ul>
+            <li> </li>
             @elseif(Session::get('loginrole')=='aobppp')
             <li><a  class=" waves-dark fcolor" href="/home_aobppp"><i class="icon-home"></i>@lang('Medical Services')</a>
             <ul aria-expanded="false" class="collapse">

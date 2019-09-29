@@ -73,50 +73,38 @@
         <!-- Nav tabs -->
         <ul class="nav customtab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#insurdperson" role="tab">
+                <a class="nav-link" data-toggle="tab" href="#minutes" role="tab">
                     <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
-                        class="hidden-xs-down">@lang('Insured Person Details')</span>
+                        class="hidden-xs-down">@lang('Minutes of Meeting')</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#doctor" role="tab">
-                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
-                        class="hidden-xs-down">@lang('Doctor Details')</span>
+                <a class="nav-link" data-toggle="tab" href="#committees" role="tab"><span 
+                        class="hidden-sm-up"><i class="ti-notepad"></i></span> <span 
+                        class="hidden-xs-down">@lang('Committee')</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#document" role="tab">
-                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
-                        class="hidden-xs-down">@lang('Prepare Document')</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#invoice" role="tab">
-                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
-                        class="hidden-xs-down">@lang('Upload Invoice And Report')</span>
+                <a class="nav-link" data-toggle="tab" href="#appointments" role="tab"><span 
+                        class="hidden-sm-up"><i class="ti-notepad"></i></span> <span 
+                        class="hidden-xs-down">@lang('Create Appointment')</span>
                 </a>
             </li>
         </ul>
         <!-- Tab panes -->
         <div class="tab-content tabcontent-border">
 
-            <div class="tab-pane p-20 active" id="insurdperson" role="tabpanel">
-                @include('MedicalServices.Investigation.ACPP.insurdperson')
-
-            </div>
-            <div class="tab-pane p-20" id="doctor" role="tabpanel">
-                @include('MedicalServices.Investigation.ACPP.doctor')
-
-            </div>
-            <div class="tab-pane p-20" id="document" role="tabpanel">
-                @include('MedicalServices.Investigation.ACPP.document')
-
-            </div>
-            <div class="tab-pane p-20" id="invoice" role="tabpanel">
-                @include('MedicalServices.Investigation.ACPP.invoice')
+            <div class="tab-pane p-20 active" id="minutes" role="tabpanel">
+                @include('MedicalServices.ABPPP.appointment.minutes')
 
             </div>
             
+            <div class="tab-pane p-20" id="committees" role="tabpanel">
+                @include('MedicalServices.ABPPP.appointment.committee')
+            </div>
+            <div class="tab-pane p-20" id="appointments" role="tabpanel">
+                @include('MedicalServices.ABPPP.appointment.createApp')
+            </div>
         </div>
     </div>
 </div>

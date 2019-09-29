@@ -144,61 +144,60 @@
                                         <div class="form-body">
                                             <div class="row p-t-20">
                                                 <div class="col-12">
-                                                        <div class="table-responsive">
-                                                                <table id="demo-foo-row-toggler" class="table table-bordered"
-                                                                    data-toggle-column="first">
-                                                                    <thead>
-                                                                        <th>Notice Date</th>
-                                                                        <th>Notice Type</th>
-                                                                        <th>Scheme Ref. No.</th>
-                                                                        <th>Benefit Ref. No.</th>
-                                                                        <th>View</th>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <td></td>
-                                                                        <td></td>
-                                                                        <td></td>
-                                                                        <td></td>
-                                                                        <td>
-                                                                            <div class="input-group-append">
-                                                                                <span class="input-group-text"
-                                                                                    style="background-color: #d8e8e9;"><a
-                                                                                        class="get-code" href="#tt1"
-                                                                                        aria-expanded="true"><i
-                                                                                            class="fas fa-file-alt" title="Scheme Case/Supporting Doc
-                                                                                    " data-toggle="tooltip"></i></a></span>
-                                                                                &nbsp;<span class="input-group-text"
-                                                                                    style="background-color: #d8e8e9;"><a
-                                                                                        class="get-code" href="#tt1"
-                                                                                        aria-expanded="true"><i
-                                                                                            class="fas fa-info-circle" title="Opinion Details
-                                                                                    " data-toggle="tooltip"></i></a></span>
-                                                                                &nbsp;<span class="input-group-text"
-                                                                                    style="background-color: #d8e8e9;"><a
-                                                                                        class="get-code" href="#tt1"
-                                                                                        aria-expanded="true"><i
-                                                                                            class="fas fa-handshake" title="RTW Social Economic Report
-                                                                                    " data-toggle="tooltip"></i></a></span>
-                                                                                &nbsp;<span class="input-group-text"
-                                                                                    style="background-color: #d8e8e9;"><a
-                                                                                        class="get-code" href="#tt1"
-                                                                                        aria-expanded="true"><i class="fas fa-users"
-                                                                                            title="RTW Report
-                                                                                    " data-toggle="tooltip"></i></a></span>
-            
-                                                                            </div>
-                                                                        </td>
-                                                                    </tbody>
-                                                                </table>
-                                                                <div class="col-md-6 offset-6">
-                                                                    <a class="btn btn waves-effect waves-light btn-success a1"
-                                                                        data-toggle="collapse"
-                                                                        data-target="#collapsethree,#collapsefour"
-                                                                        aria-expanded="true" aria-controls="collapsethree">
-                                                                        Next
-                                                                    </a>
-                                                                </div>
-                                                            </div>
+                                                    <div class="table-responsive">
+                                                        <table id="demo-foo-row-toggler" class="table table-bordered"
+                                                            data-toggle-column="first">
+                                                            <thead>
+                                                                <th>Notice Date</th>
+                                                                <th>Notice Type</th>
+                                                                <th>Scheme Ref. No.</th>
+                                                                <th>Benefit Ref. No.</th>
+                                                                <th>View</th>
+                                                            </thead>
+                                                            <tbody>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td>
+                                                                    <div class="input-group-append">
+                                                                        <span class="input-group-text"
+                                                                            style="background-color: #d8e8e9;"><a
+                                                                                class="get-code" href="#tt1"
+                                                                                aria-expanded="true"><i
+                                                                                    class="fas fa-file-alt" title="Scheme Case/Supporting Doc
+                                                                            " data-toggle="tooltip"></i></a></span>
+                                                                        &nbsp;<span class="input-group-text"
+                                                                            style="background-color: #d8e8e9;"><a
+                                                                                class="get-code" href="#tt1"
+                                                                                aria-expanded="true"><i
+                                                                                    class="fas fa-info-circle" title="Opinion Details
+                                                                            " data-toggle="tooltip"></i></a></span>
+                                                                        &nbsp;<span class="input-group-text"
+                                                                            style="background-color: #d8e8e9;"><a
+                                                                                class="get-code" href="#tt1"
+                                                                                aria-expanded="true"><i
+                                                                                    class="fas fa-handshake" title="RTW Social Economic Report
+                                                                            " data-toggle="tooltip"></i></a></span>
+                                                                        &nbsp;<span class="input-group-text"
+                                                                            style="background-color: #d8e8e9;"><a
+                                                                                class="get-code" href="#tt1"
+                                                                                aria-expanded="true"><i class="fas fa-users"
+                                                                                    title="RTW Report
+                                                                            " data-toggle="tooltip"></i></a></span>
+                                                                    </div>
+                                                                </td>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="col-md-6 offset-6">
+                                                            <a class="btn btn waves-effect waves-light btn-success a1"
+                                                                data-toggle="collapse"
+                                                                data-target="#collapsethree,#collapsefour"
+                                                                aria-expanded="true" aria-controls="collapsethree">
+                                                                Next
+                                                            </a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

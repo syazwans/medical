@@ -190,7 +190,7 @@
                             <td>Accident</td>
                             <td>Medical Opinion</td>
                             <td>New</td>
-                            <td><a id='selectdraft' href="/abppp"><i class="fas fa-edit"></i></a></td>
+                            <td><a id='selectdraft' href="/index"><i class="fas fa-edit"></i></a></td>
                         </tbody>
                         <tbody>
                             <td>5</td>
@@ -203,7 +203,7 @@
                             <td>Occupational Disease</td>
                             <td>Medical Investigation Internal</td>
                             <td>New</td>
-                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                            <td><a id='selectdraft' href="/"><i class="fas fa-edit"></i></a></td>
                         </tbody>
                         <tbody>
                             <td>6</td>
@@ -255,7 +255,7 @@
                             <td>Occupational Disease</td>
                             <td>Medical Investigation Clarification/td>
                             <td>New</td>
-                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                            <td><a id='selectdraft' href="/acpp"><i class="fas fa-edit"></i></a></td>
                         </tbody>
                         <tbody>
                             <td>10</td>
@@ -268,7 +268,7 @@
                             <td>Occupational Disease</td>
                             <td>Medical Investigation Clarification</td>
                             <td>New</td>
-                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                            <td><a id='selectdraft' href="/aocpp"><i class="fas fa-edit"></i></a></td>
                         </tbody>
                 </table>
             </div>

@@ -60,7 +60,7 @@
         </div>
         <div class="row p-12">
             <div class="col-md-12">
-                <h4 class="card-title">@lang('Accident')</h4>
+                <h4 class="card-title">@lang('Occupational Disease')</h4>
             </div>
 
 
