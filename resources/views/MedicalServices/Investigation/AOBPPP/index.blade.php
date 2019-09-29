@@ -74,7 +74,7 @@
         </div>
         <div class="row p-12">
             <div class="col-md-12">
-                <h4 class="card-title">@lang('Investigation : Internal')</h4>
+                <h4 class="card-title">@lang('Investigation : Special Report')</h4>
             </div>
 
 
@@ -93,19 +93,21 @@
         <ul class="nav customtab" role="tablist">
 
             <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#medical_investigation" role="tab">
-                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">@lang('Employability Report')</span>
+                <a class="nav-link active" data-toggle="tab" href="#invoice_approval" role="tab">
+                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">@lang('Invoice Approval')</span>
                 </a>
             </li>
-
 
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#support_doc_investigation" role="tab"><span
-                        class="hidden-sm-up"><i class="ti-layers-alt"></i></span> <span
-                        class="hidden-xs-down">@lang('Supporting Document')</span>
+                <a class="nav-link" data-toggle="tab" href="#quotation_approval" role="tab">
+                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">@lang('Quotation Approval')</span>
                 </a>
             </li>
-
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#approval_invoice" role="tab">
+                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">@lang('Approval Invoice')</span>
+                </a>
+            </li>
         </ul>
 
 
@@ -113,16 +115,18 @@
         <!-- Tab panes -->
         <div class="tab-content tabcontent-border">
 
-            <div class="tab-pane p-20 active" id="medical_investigation" role="tabpanel">
-                @include('MedicalServices.Investigation.MOEI.moei_investigation_internal')
-            </div>
-
-            <div class="tab-pane p-20" id="support_doc_investigation" role="tabpanel">
-                @include('MedicalServices.Investigation.MOEI.moei_supporting_doc')
-            </div>
-
             
-        
+        <div class="tab-pane p-20 active" id="invoice_approval" role="tabpanel">
+                @include('MedicalServices.Investigation.AOBPPP.invoice_approval')
+            </div>
+            
+            <div class="tab-pane p-20" id="quotation_approval" role="tabpanel">
+                @include('MedicalServices.Investigation.AOBPPP.quotation_approval')
+            </div>
+            
+            <div class="tab-pane p-20" id="approval_invoice" role="tabpanel">
+                @include('MedicalServices.Investigation.AOBPPP.approval_invoice')
+            </div>
         </div>
     </div>
 </div>

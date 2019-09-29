@@ -174,11 +174,11 @@
 
 
 
-<div class="modal fade" id="medicalOpinionModal" tabindex="-1" role="dialog" aria-labelledby="medicalOpinionModal1">
+        <div class="modal fade" id="medicalOpinionModal" tabindex="-1" role="dialog" aria-labelledby="medicalOpinionModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="medicalOpinionModal1">New message</h4>
+                <h4 class="modal-title" id="medicalOpinionModal"></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
@@ -190,13 +190,13 @@
                                                         <input type="text" value="" class="form-control" readonly>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-7">
+                                                <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="control-label">@lang('ID No. :')</label>
                                                         <input type="text" value="" class="form-control" readonly>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="control-label">@lang('Date :')</label>
                                                         <input type="text" value="" class="form-control" readonly>
@@ -287,28 +287,21 @@
                                                         <input type="text" value="" class="form-control" >
                                                     </div>
                                                 </div>
-                                                <div class="col-md-5">
+                                                <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="control-label">Date :</label>
                                                         <input type="text" value="" class="form-control" readonly>
                                                     </div>
                                                 </div>
                                                
-                                            <br>
-                                            <div class="form-actions">
-                                                    <a  class="btn btn waves-effect waves-light btn-success a1">Cancel</a>
-                                                        <a  class="btn btn waves-effect waves-light btn-success a1">Back</a>
-                                                </div>
-                                                <div class="form-actions text-right">
-                                                    <a class="btn btn waves-effect waves-light btn-success a1">Submit</a>
-                                                </div>
+                                            <br>                                       
                                         
                                         </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send message</button>
+                <button type="button" class="btn btn-primary">Submit</button>
             </div>
         </div>
     </div>

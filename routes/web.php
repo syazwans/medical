@@ -224,6 +224,9 @@ Route::get('/Ilat', 'medicalServices\IlatController@index');
 Route::get('/newcase', function () {
     return view('MedicalServices.noticeAccident.newcase');
 });
+Route::get('/reportstatus', function () {
+    return view('MedicalServices.Investigation.ABPPP.report_status');
+});
 Route::get('/abppp', function () {
     return view('MedicalServices.ABPPP.index');
 });
@@ -243,6 +246,11 @@ Route::get('/index', function () {
 
 
 
+
 Route::get('/accident', 'medicalServices\AccidentController@index')->name('accident');
 Route::get('/invadility', 'medicalServices\IlatController@index')->name('invadility');
 Route::get('/od', 'medicalServices\OdController@index')->name('od');
+Route::get('/investigate_internal', 'medicalServices\InvestigationController@index')->name('investigate_internal');
+Route::get('/investigate_internal_abppp', 'medicalServices\InvestigationController@indexInternalAbppp')->name('investigate_internal_abppp');
+Route::get('/special_report', 'medicalServices\InvestigationController@indexSpecialReport')->name('special_report');
+Route::get('/special_report_aobppp', 'medicalServices\InvestigationController@indexSpecialReportAobpp')->name('special_report_aobppp');

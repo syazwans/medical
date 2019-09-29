@@ -359,6 +359,29 @@ $("#btn_diagnosis").click(function () {
         });
     });
 
+    $("#btn_moei_investigation").click(function () {
+        var no = $('#myTable_moei_investigation tr:last td:first').find("input").val();
+        var delete1 = "('Are you sure want to delete the draft?')";
+        no++;
+        // var no = no++;
+        $('#myTable_moei_investigation > tbody:last-child').append('<tr id="moei'+no+'"> ' +
+        '<td style="display:none;"><input type="hidden" value="'+no+'"></td>' +
+        '<td>'+no+'</td> <td><input type="text" value="" class="form-control"></td>' +
+        '<td><input type="text" value="" class="form-control"></td>'+ 
+        '<td><input type="text" value="" class="form-control"></td>'+ 
+        '<td><input type="text" value="" class="form-control"></td>'+ 
+        '<td><input type="text" value="" class="form-control"></td>'+ 
+        '<td><select class="form-control" name="moreinfo" id="moreinfo"> <option value="PS" hidden selected readonly>Please Select</option><option value="Y">Yes</option> <option value="N">No</option><option value="N">Not Applicable</option></select></td>'+ 
+        '<td><a class="btn btn-sm btn-danger"  id="deletedraft'+no+'" confirm('+delete1+'); ><i class="fas fa-trash-alt fa-sm"></i></a></td> </tr>');
+        $('#deletedraft'+no+'').click(function(){
+            alert('Are you sure want to delete the draft? ');
+
+            $('#myTable_moei_investigation').each(function(){
+            $('#moei'+no+'').remove();
+        });
+        });
+    });
+
     $("#btn_query").click(function () {
         var no = $('#myTable_query tr:last td:first').find("input").val();
         // var no = 1;
@@ -436,6 +459,8 @@ $("#btn_diagnosis").click(function () {
                                                     });
                                                     });
     });
+
+  
 
 
     $(document).ready(function(){

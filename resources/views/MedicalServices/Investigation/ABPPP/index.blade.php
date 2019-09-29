@@ -74,7 +74,7 @@
         </div>
         <div class="row p-12">
             <div class="col-md-12">
-                <h4 class="card-title">@lang('Investigation : Internal')</h4>
+                <h4 class="card-title">@lang('Investigation : Special Report')</h4>
             </div>
 
 
@@ -93,14 +93,23 @@
         <ul class="nav customtab" role="tablist">
 
             <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#medical_investigation" role="tab">
-                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">@lang('Employability Report')</span>
+                <a class="nav-link active" data-toggle="tab" href="#req_quotation" role="tab">
+                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">@lang('Request Quotation')</span>
                 </a>
             </li>
 
-
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#support_doc_investigation" role="tab"><span
+                <a class="nav-link" data-toggle="tab" href="#upload_quotation" role="tab">
+                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">@lang('Upload Quotation')</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#medical_special" role="tab">
+                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">@lang('Upload Invoice & Report')</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#support_doc_special" role="tab"><span
                         class="hidden-sm-up"><i class="ti-layers-alt"></i></span> <span
                         class="hidden-xs-down">@lang('Supporting Document')</span>
                 </a>
@@ -113,12 +122,21 @@
         <!-- Tab panes -->
         <div class="tab-content tabcontent-border">
 
-            <div class="tab-pane p-20 active" id="medical_investigation" role="tabpanel">
-                @include('MedicalServices.Investigation.MOEI.moei_investigation_internal')
+            
+        <div class="tab-pane p-20 active" id="req_quotation" role="tabpanel">
+                @include('MedicalServices.Investigation.ABPPP.abppp_request_quotation')
+            </div>
+            
+            <div class="tab-pane p-20" id="upload_quotation" role="tabpanel">
+                @include('MedicalServices.Investigation.ABPPP.abppp_upload_quotation')
+            </div>
+            
+            <div class="tab-pane p-20" id="medical_special" role="tabpanel">
+                @include('MedicalServices.Investigation.ABPPP.upload_invoice')
             </div>
 
-            <div class="tab-pane p-20" id="support_doc_investigation" role="tabpanel">
-                @include('MedicalServices.Investigation.MOEI.moei_supporting_doc')
+            <div class="tab-pane p-20" id="support_doc_special" role="tabpanel">
+                @include('MedicalServices.Investigation.ABPPP.supporting_doc_special')
             </div>
 
             

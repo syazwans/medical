@@ -89,10 +89,11 @@
             <li><a  class="waves-effect waves-dark fcolor" href="/home_mohuk"><i class="icon-home"></i>@lang('Medical Services')</a></li>
 
             @elseif(Session::get('loginrole')=='moei')
-            <li><a class=" waves-dark fcolor" href="/home"><i class="icon-home"></i>@lang('navbar.home')</a></li>
-            <li> <a class=" waves-dark fcolor" href="/home_moei" aria-expanded="false"><span class="hide-menu">@lang('Medical Services')</span></a>
+            <li><a class=" waves-dark fcolor" href="/home_moei"><i class="icon-home"></i>@lang('navbar.home')</a></li>
+            <li> <a class=" waves-dark fcolor" aria-expanded="false"><span class="hide-menu">@lang('Medical Services')</span></a>
                 <ul aria-expanded="false" class="collapse">
                     <li><a href="/newcase">@lang('New Case')</a></li>
+                    <li><a href="/reportstatus">@lang('Report Status')</a></li>
     
                 </ul>
                 </li>

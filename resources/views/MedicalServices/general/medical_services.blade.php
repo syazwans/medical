@@ -203,7 +203,7 @@
                             <td>Occupational Disease</td>
                             <td>Medical Investigation Internal</td>
                             <td>New</td>
-                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                            <td><a id='selectdraft'href="{{route ('investigate_internal')}}"><i class="fas fa-edit"></i></a></td>
                         </tbody>
                         <tbody>
                             <td>6</td>
@@ -216,7 +216,7 @@
                             <td>Occupational Disease</td>
                             <td>Medical Investigation Internal</td>
                             <td>New</td>
-                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                            <td><a id='selectdraft' href="{{route ('investigate_internal_abppp')}}"><i class="fas fa-edit"></i></a></td>
                         </tbody>
                         <tbody>
                             <td>7</td>
@@ -229,7 +229,7 @@
                             <td>Occupational Disease</td>
                             <td>Medical Investigation Special Report</td>
                             <td>New</td>
-                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                            <td><a id='selectdraft' href="{{route ('special_report')}}"><i class="fas fa-edit"></i></a></td>
                         </tbody>
                         <tbody>
                             <td>8</td>
@@ -242,7 +242,7 @@
                             <td>Occupational Disease</td>
                             <td>Medical Investigation Special Report</td>
                             <td>New</td>
-                            <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
+                            <td><a id='selectdraft' href="{{route ('special_report_aobppp')}}"><i class="fas fa-edit"></i></a></td>
                         </tbody>
                         <tbody>
                             <td>9</td>
@@ -253,7 +253,7 @@
                             <td>EI001/19</td>
                             <td>800920145344</td>
                             <td>Occupational Disease</td>
-                            <td>Medical Investigation Clarification/td>
+                            <td>Medical Investigation Clarification</td>
                             <td>New</td>
                             <td><a id='selectdraft' href=''><i class="fas fa-edit"></i></a></td>
                         </tbody>
