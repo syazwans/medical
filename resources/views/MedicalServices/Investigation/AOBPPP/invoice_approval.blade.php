@@ -14,12 +14,6 @@
                                             <input type="text" value="" class="form-control" readonly>
                                         </div>
                                     </div>
-                                <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="control-label">Quotation Ref. No. :</label>
-                                            <input type="text" value="" class="form-control" readonly>
-                                        </div>
-                                    </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="control-label">Type of Investigation :</label>

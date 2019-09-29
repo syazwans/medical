@@ -64,6 +64,7 @@
                                                 <th>Service Provider</th>
                                                 <th>Email</th>
                                                 <th>Quotation Ref. No.</th>
+                                                <th>Amount</th>
                                                 <th>Expiry Date</th>
                                                 <th>Action</th>
                                             </tr>
@@ -75,8 +76,9 @@
                                                 <!-- <td>1</td> -->
                                                 <td></td>
                                                 <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <td><input type="text" value="" class="form-control"></td>
+                                                <td><input type="text" value="" class="form-control"></td>
+                                                <td><input type="text" value="" class="form-control"></td>
                                                 <td><div class="input-group-append">
                                                 <a id="uploaddraft" data-toggle="modal" data-target="#modal_document" data-id="1" data-whatever="@getbootstrap"
                                                  href="#tt1" aria-expanded="true"><i class="fas fa-file-alt" title="View Upload File" data-toggle="tooltip"></i></a>
@@ -96,8 +98,9 @@
                                                 <!-- <td>2</td> -->
                                                 <td></td>
                                                 <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <td><input type="text" value="" class="form-control"></td>
+                                                <td><input type="text" value="" class="form-control"></td>
+                                                <td><input type="text" value="" class="form-control"></td>
                                                 <td><div class="input-group-append">
                                                 <a id="uploaddraft" data-toggle="modal" data-target="#modal_document" data-id="1" data-whatever="@getbootstrap"
                                                  href="#tt1" aria-expanded="true"><i class="fas fa-file-alt" title="View Upload File" data-toggle="tooltip"></i></a>
@@ -115,8 +118,8 @@
                                 </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label class="control-label">@lang('Remark :')</label>
-                                            <input type="text" value="" class="form-control" readonly>
+                                            <label class="control-label">@lang('Recommendation :')</label>
+                                            <input type="text" value="" class="form-control">
                                         </div>
                                     </div>
                                 <br>
