@@ -389,66 +389,34 @@ $("#btn_diagnosis").click(function () {
         no++;
         // var no = no++;
         $('#myTable_query > tbody:last-child').append('<tr id="clari'+no+'"> <td style="display:none;"><input type="hidden" value="'+no+'"></td><td>'+no+'</td> <td>'+
-                                                '<div class="dropdown">'+
-                                                '<button class="btn btn-default dropdown-toggle middle" type="button" id="dropdownMenu'+no+'" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Please Select<span class="caret"></span></button>'+
-                                               ' <div class="dropdown-menu" style="width:300px;" aria-labelledby="dropdownMenu1">'+
-                                                ' <a href="#" value="emp_ob">Employer/OB</a>'+
-                                                 '<br>'+
-                                                 '<a href="#" value="emp_ob">Scheme</a>'+
-                                                ' <br>'+
-                                                '<a href="#" value="emp_ob">RTW</a>'+
-                                                '<br>'+
-                                                '<a href="#" value="emp_ob">Medical Investigation-Perkeso Doctor</a>'+
-                                                '<br>'+
-                                                '<a href="#" value="emp_ob">Medical Investigation-Special Report</a>'+
-                                                '<br>'+
-                                               ' <a href="#" data-toggle="modal" data-target="#medicalOpinionModal">Medical Investigation- Medical Clarification</a>'+
-                                                 '</div>'+
+                                                 '<select class="form-control" style="width:300px;" id="change">' +
+                                                 '<option value="PS" hidden selected readonly>Please Select</option>' +
+                                                 '<option value="1">Employer/Insured Person</option>' +
+                                                 '<option value="2">Scheme</option>' +
+                                                 '<option value="3">RTW</option>' +
+                                                 '<option value="4">Medical Investigation-PERKESO Doctor</option>' +
+                                                '<option value="5">Medical Investigation-Special Report</option>' +
+                                                '<option value="6">Medical Investigation- Medical Clarification</option>' +
+                                                '</select>'+
                                                 ' <td><div class="input-group-append">'+
                                                ' <span class="input-group-text" style="background-color: #d8e8e9;"><a class="get-code" data-toggle="modal"'+
-                                                'data-target="#modal_document" data-id="'+no+'" data-whatever="@getbootstrap"'+
-                                               ' href="#tt'+no+'" aria-expanded="true"><i class="fas fa-file-alt"title="Request Document" data-toggle="tooltip"></i></a></span>'+
+                                                'data-target="#modal_document" data-id="'+no+'"'+
+                                                ' href="#tt'+no+'" aria-expanded="true"><i class="fas fa-file-alt"title="Request Document" data-toggle="tooltip"></i></a></span>'+
                                                 '</div>'+
                                                 '<p id="requestDoc'+no+'"></p></td>'+
                                                 ' </div></td><td></td> <td><a class="btn btn-sm btn-danger"  id="deletedraft'+no+'" confirm('+delete1+'); ><i class="fas fa-trash-alt fa-sm"></i></a></td> </tr>');
                                            
-                                                      
+                                                $(document).ready(function () {
 
-                                        // if(no>0){
-                                        //     $(document).ready(function() {
-                                                            
-                                        //                     $('#modal_document').on('show.bs.modal',function(e){
-                                        //                     // var number=$(e.relatedTarget).data('id');
-                                        //                     // console.log(number);
-                                        //                     $("#submitModal").click(function() {
-                                        //                         var fav1 = [];
-    
-                                                                
-    
-                                        //                             $.each($("input[name='medical_report']:checked"), function() {
-                                        //                                 fav1.push($(this).val());
-                                        //                             });
-                                        //                             $("#requestDoc"+no).html(fav1.join(", "));
-                                                                     
-    
-                                        //                         // fav1 = [];
-                                        //                         });
-                                        //                         $('#modal_document').on('hide.modal',function(e){
-                                        //                                 $("input[name='medical_report']").prop("checked", false);
-                                        //                                 fav1 = [];
-                                        //                             });
-                                        //                     });
-    
-                                        //                 // $('#modal_document').on('hide.bs.modal',function(e){
-                                                            
-                                                            
-                                                            
-                                        //                 //     $("input[name='medical_report']").prop("checked", false);
-                                        //                 // });
-    
-    
-                                        //                 });
-                                        // }
+                                                    $('select').on('change',function(){
+                                                    //this is just getting the value that is selected
+                                                    if ($(this).val() == "6") {
+                                                        $('#medicalOpinionModal').modal('show');
+                                                    }
+                                                    //   $('#medicalOpinionModal').modal('hide');
+                                                    });
+
+                                                    });
                                                 
                                                     
                                                     $('#deletedraft'+no+'').click(function(){
@@ -457,7 +425,7 @@ $("#btn_diagnosis").click(function () {
                                                         $('#myTable_query').each(function(){
                                                         $('#clari'+no+'').remove();
                                                     });
-                                                    });
+                                                });
     });
 
   
@@ -482,30 +450,50 @@ $("#btn_diagnosis").click(function () {
     
 $(document).ready(function() {
     
-        
-
     $('#modal_document').on('show.bs.modal',function(e){
-        //    var number=$(e.relatedTarget).data('id');
-        //    console.log(number);
-        var no = $('#myTable_query tr:last td:first').find("input").val();
+        if($("input[name='medical_report']:checked").prop("checked") == true)
+            $("input[name='medical_report']").prop("checked", false);
 
-            $("#submitModal").click(function() {
-            // var fav = 'favorite'+number;
-            var fav = [];
+        var no_row = $(e.relatedTarget).data('id');
+        console.log('Selected row: ' + no_row);
+        
+        var modal = $(this);
+        modal.find('.submitModal').val(no_row);
+        $('.submitModal').attr('id','submitModal' + no_row);
+
+        $('.submitModal').click(function() {
+            if($('.submitModal').val() == no_row){
+                var fav = [];
 
                 $.each($("input[name='medical_report']:checked"), function() {
                     fav.push($(this).val());
                 });
-                $("#requestDoc"+no).html(fav.join(", "));
+
+                console.log(fav);
+
+                $('#requestDoc' + no_row).html(fav.join(", "));
+
+                console.log('Selected row fav: ' + no_row);
+
                 $('#modal_document').modal('hide');
-                no++;
-            });
-            // $('#modal_document').on('hide.bs.modal',function(e){
-            if($("input[name='medical_report']:checked").prop("checked") == false) 
-                $("input[name='medical_report']").prop("checked", false);
-                                                // });  
+            }else{
+                $('#modal_document').modal('hide');
+            }
+        });
     });
     
+});
+
+$(document).ready(function () {
+
+$('select').on('change',function(){
+  //this is just getting the value that is selected
+  if ($(this).val() == "6") {
+    $('#medicalOpinionModal').modal('show');
+  }
+//   $('#medicalOpinionModal').modal('hide');
+});
+
 });
 
 
