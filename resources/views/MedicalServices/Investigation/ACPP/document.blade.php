@@ -32,7 +32,18 @@
                                                                     </thead>
                                                                     <tbody>
                                                                         <td>Medical Clarification Form</td>
-                                                                        <td></td>
+                                                                        <td><div class="input-group ">
+                                                                                <div class="input-group-append">
+                                                                                    <span class="input-group-text"
+                                                                                        style="background-color: #d8e8e9;"><a
+                                                                                            class="get-code" data-toggle="modal"
+                                                                                            data-target="#clarification"
+                                                                                            data-whatever="@getbootstrap" href="#tt1"
+                                                                                            aria-expanded="true"><i class="fas fa-file-alt"
+                                                                                                title="Generate
+                                                                                            " data-toggle="tooltip"></i></a></span>
+                                                                                    @include('MedicalServices.noticeAccident.clarification')
+                                                                                </div></td>
                                                                     </tbody>
                                                                     <tbody>
                                                                         <td>Consent Letter</td>

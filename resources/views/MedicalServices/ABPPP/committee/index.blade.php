@@ -58,7 +58,7 @@
         </div>
         <div class="row p-12">
             <div class="col-md-12">
-                <h4 class="card-title">@lang('ABPPP')</h4>
+                <h4 class="card-title">@lang('COMMITTEE')</h4>
             </div>
             {{-- Button Modal --}}
             {{-- <div class="col-md-6 align-self-center text-right" >
@@ -73,39 +73,53 @@
         <!-- Nav tabs -->
         <ul class="nav customtab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#appointments" role="tab"><span 
-                        class="hidden-sm-up"><i class="ti-notepad"></i></span> <span 
-                        class="hidden-xs-down">@lang('Appointment')</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#committees" role="tab"><span 
-                        class="hidden-sm-up"><i class="ti-notepad"></i></span> <span 
-                        class="hidden-xs-down">@lang('Committee')</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#minutes" role="tab">
+                <a class="nav-link" data-toggle="tab" href="#committees" role="tab">
                     <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
-                        class="hidden-xs-down">@lang('Minutes of Meeting')</span>
+                        class="hidden-xs-down">@lang('List Of OB')</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#facts" role="tab">
+                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
+                        class="hidden-xs-down">@lang('Fact Case Info')</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#currents" role="tab">
+                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
+                        class="hidden-xs-down">@lang('Current Case Info')</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#historys" role="tab">
+                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
+                        class="hidden-xs-down">@lang('History Info')</span>
+                </a>
+            </li>
+    
             
         </ul>
         <!-- Tab panes -->
         <div class="tab-content tabcontent-border">
 
-            <div class="tab-pane p-20 " id="minutes" role="tabpanel">
-                @include('MedicalServices.ABPPP.appointment.minutes')
+            <div class="tab-pane p-20 active" id="committees" role="tabpanel">
+                @include('MedicalServices.ABPPP.committee.committee_list')
 
             </div>
+            <div class="tab-pane p-20 " id="facts" role="tabpanel">
+                @include('MedicalServices.ABPPP.committee.committee_fact')
+
+            </div>
+            <div class="tab-pane p-20 " id="currents" role="tabpanel">
+                @include('MedicalServices.ABPPP.committee.committee_current')
+
+            </div>
+            <div class="tab-pane p-20 " id="historys" role="tabpanel">
+                @include('MedicalServices.ABPPP.committee.committee_history')
+
+            </div>
+           
             
-            <div class="tab-pane p-20" id="committees" role="tabpanel">
-                @include('MedicalServices.ABPPP.appointment.committee')
-            </div>
-            <div class="tab-pane p-20 active" id="appointments " role="tabpanel">
-                @include('MedicalServices.ABPPP.appointment.createApp')
-            </div>
         </div>
     </div>
 </div>

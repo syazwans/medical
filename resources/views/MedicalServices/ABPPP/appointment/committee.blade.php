@@ -364,6 +364,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @include('MedicalServices.noticeAccident.medical_opinion')
                         </div>
                     </div>
                 </form>

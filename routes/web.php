@@ -243,7 +243,7 @@ Route::get('/aocpp', function () {
     return view('MedicalServices.Investigation.AOCPP.index');
 });
 Route::get('/committee', function () {  
-    return view('MedicalServices.ABPPP.committee');
+    return view('MedicalServices.ABPPP.committee.index');
 });
 
 

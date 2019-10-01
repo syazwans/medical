@@ -7,13 +7,16 @@
                         <h4 class="card-title">@lang('Minutes of Meeting')</h4>
                         <div class="modal-body">
                             <div class="card-body">
+                                
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label class="control-label">Meeting Reference No.</label>
+                                                    <input type="text" value="" class="form-control" readonly>
+                                                </div>
+                                </div>
                                 <div class="row p-t-20">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="control-label">Meeting Reference No.</label>
-                                            <input type="text" value="" class="form-control" readonly>
-                                        </div>
-                                    </div>
                                     <div class="col-md-8">
                                         <div class="form-group">
                                             <label class="control-label">@lang('Tittle :')</label>
@@ -47,31 +50,31 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="control-label">Chairperson Speech :</label>
-                                            <input type="text" value="" class="form-control" readonly>
+                                            <input type="text" value="" class="form-control" >
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="control-label">Approval of Minutes :</label>
-                                            <input type="text" value="" class="form-control" readonly>
+                                            <input type="text" value="" class="form-control" >
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="control-label">Reports :</label>
-                                            <input type="text" value="" class="form-control" readonly>
+                                            <input type="text" value="" class="form-control" >
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="control-label">Agenda Review :</label>
-                                            <input type="text" value="" class="form-control" readonly>
+                                            <input type="text" value="" class="form-control" >
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="control-label">Closing :</label>
-                                            <input type="text" value="" class="form-control" readonly>
+                                            <input type="text" value="" class="form-control" >
                                         </div>
                                     </div>
                                 </div>
