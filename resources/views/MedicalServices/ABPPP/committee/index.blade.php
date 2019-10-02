@@ -96,6 +96,12 @@
                         class="hidden-xs-down">@lang('History Info')</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#feedbacks" role="tab">
+                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
+                        class="hidden-xs-down">@lang('Query & Feedback')</span>
+                </a>
+            </li>
     
             
         </ul>
@@ -116,6 +122,10 @@
             </div>
             <div class="tab-pane p-20 " id="historys" role="tabpanel">
                 @include('MedicalServices.ABPPP.committee.committee_history')
+
+            </div>
+            <div class="tab-pane p-20 " id="feedbacks" role="tabpanel">
+                @include('MedicalServices.ABPPP.committee.committee_query')
 
             </div>
            
