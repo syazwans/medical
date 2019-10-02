@@ -192,30 +192,6 @@ class AccidentController extends Controller
     public function getOBD(&$jsondecodeobd,$id)
     {
         $caserefno = $id;
-        // $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetOBDetails?caserefno='.$caserefno;
-                          
-
-        //  return $url;
-
-        // $ch = curl_init();
-        
-        // curl_setopt($ch, CURLOPT_URL, $url);
-        // curl_setopt($ch, CURLOPT_PROXY, '');
-        
-        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-
-        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        // $result = curl_exec($ch);
-        // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        // curl_close($ch);
-        // $jsondecodeobd = json_decode($result);
-
-        //  return $jsondecodeobd;
-        //close connection
-        // dd($url);
-
         try {
             $client = new Client([
                 // Base URI is used with relative requests
@@ -242,30 +218,6 @@ class AccidentController extends Controller
     public function getEmployer(&$jsondecodeed,$id)
     {
         $caserefno = $id;
-        // $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetEmployeeDetails?caserefno='.$caserefno;
-                          
-
-        //  return $url;
-
-        // $ch = curl_init();
-        
-        // curl_setopt($ch, CURLOPT_URL, $url);
-        // curl_setopt($ch, CURLOPT_PROXY, '');
-        
-        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-
-        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        // $result = curl_exec($ch);
-        // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        // curl_close($ch);
-        // $jsondecodeed = json_decode($result);
-
-        //  return $jsondecodeobd;
-        //close connection
-        // dd($url);
-
         try {
             $client = new Client([
                 // Base URI is used with relative requests
@@ -291,29 +243,6 @@ class AccidentController extends Controller
     public function getAcc(&$jsondecodeacc,$id)
     {
         $caserefno = $id;
-        // $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetAccNoticeDetails?caserefno='.$caserefno;
-                          
-
-        //  return $url;
-
-        // $ch = curl_init();
-        
-        // curl_setopt($ch, CURLOPT_URL, $url);
-        // curl_setopt($ch, CURLOPT_PROXY, '');
-        
-        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-
-        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        // $result = curl_exec($ch);
-        // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        // curl_close($ch);
-        // $jsondecodeacc = json_decode($result);
-
-        //  return $jsondecodeobd;
-        //close connection
-        // dd($url);
 
         try {
             $client = new Client([
@@ -340,29 +269,6 @@ class AccidentController extends Controller
     public function getSDN(&$jsondecodeSDN,$id)
     {
         $caserefno = $id;
-        // $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetSDNoticeDetails?caserefno='.$caserefno;
-                          
-
-        //  return $url;
-
-        // $ch = curl_init();
-        
-        // curl_setopt($ch, CURLOPT_URL, $url);
-        // curl_setopt($ch, CURLOPT_PROXY, '');
-        
-        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-
-        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        // $result = curl_exec($ch);
-        // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        // curl_close($ch);
-        // $jsondecodeSDN = json_decode($result);
-
-        //  return $jsondecodeobd;
-        //close connection
-        // dd($url);
 
         try {
             $client = new Client([
@@ -388,29 +294,7 @@ class AccidentController extends Controller
     public function getIlat(&$jsondecodeIlat,$id)
     {
         $caserefno = $id;
-        // $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetILATDetails?caserefno='.$caserefno;
-                          
 
-        //  return $url;
-
-        // $ch = curl_init();
-        
-        // curl_setopt($ch, CURLOPT_URL, $url);
-        // curl_setopt($ch, CURLOPT_PROXY, '');
-        
-        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-
-        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        // $result = curl_exec($ch);
-        // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        // curl_close($ch);
-        // $jsondecodeIlat = json_decode($result);
-
-        //  return $jsondecodeobd;
-        //close connection
-        // dd($url);
 
         try {
             $client = new Client([
@@ -439,26 +323,6 @@ class AccidentController extends Controller
         $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetDeathDetails?caserefno='.$caserefno;
                           
 
-        //  return $url;
-
-        // $ch = curl_init();
-        
-        // curl_setopt($ch, CURLOPT_URL, $url);
-        // curl_setopt($ch, CURLOPT_PROXY, '');
-        
-        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-
-        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        // $result = curl_exec($ch);
-        // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        // curl_close($ch);
-        // $jsondecodeddetails = json_decode($result);
-
-        //  return $jsondecodeobd;
-        //close connection
-        // dd($url);
 
         try {
             $client = new Client([
@@ -486,29 +350,7 @@ class AccidentController extends Controller
     public function getMCD(&$jsondecodeMCD,$id)
     {
         $caserefno = $id;
-        // $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetMCDetails?caserefno='.$caserefno;
-                          
-
-        //  return $url;
-
-        // $ch = curl_init();
-        
-        // curl_setopt($ch, CURLOPT_URL, $url);
-        // curl_setopt($ch, CURLOPT_PROXY, '');
-        
-        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-
-        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        // $result = curl_exec($ch);
-        // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        // curl_close($ch);
-        // $jsondecodeMCD = json_decode($result);
-
-        //  return $jsondecodeobd;
-        //close connection
-        // dd($url);
+   
 
         try {
             $client = new Client([
@@ -543,29 +385,7 @@ class AccidentController extends Controller
     public function getFcase(&$jsondecodeFcase,$id)
     {
         $caserefno = $id;
-        // $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetFactCaseInfo?caserefno='.$caserefno;
-                          
 
-        //  return $url;
-
-        // $ch = curl_init();
-        
-        // curl_setopt($ch, CURLOPT_URL, $url);
-        // curl_setopt($ch, CURLOPT_PROXY, '');
-        
-        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-
-        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        // $result = curl_exec($ch);
-        // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        // curl_close($ch);
-        // $jsondecodeFcase = json_decode($result);
-
-        //  return $jsondecodeobd;
-        //close connection
-        // dd($url);
         
         try {
             $client = new Client([
@@ -593,29 +413,6 @@ class AccidentController extends Controller
     public function getcurrentCase(&$jsondecodecurrentC,$id)
     {
         $caserefno = $id;
-        // $url = 'http://'.env('WS_IP', 'localhost').'/api/wsmotion/GetCurrentCaseDetails?caserefno='.$caserefno;
-                          
-
-        //  return $url;
-
-        // $ch = curl_init();
-        
-        // curl_setopt($ch, CURLOPT_URL, $url);
-        // curl_setopt($ch, CURLOPT_PROXY, '');
-        
-        // curl_setopt($ch, CURLOPT_HTTPGET, TRUE);
-        // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-
-        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        // $result = curl_exec($ch);
-        // $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        // $response = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-        // curl_close($ch);
-        // $jsondecodecurrentC = json_decode($result);
-
-        //  return $jsondecodeobd;
-        //close connection
-        // dd($url);
 
         try {
             $client = new Client([

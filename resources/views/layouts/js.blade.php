@@ -399,12 +399,12 @@ $("#btn_diagnosis").click(function () {
                                                 '<option value="6">Medical Investigation- Medical Clarification</option>' +
                                                 '</select>'+
                                                 ' <td><div class="input-group-append">'+
-                                               ' <span class="input-group-text" style="background-color: #d8e8e9;"><a class="get-code" data-toggle="modal"'+
-                                                'data-target="#modal_document" data-id="'+no+'"'+
-                                                ' href="#tt'+no+'" aria-expanded="true"><i class="fas fa-file-alt"title="Request Document" data-toggle="tooltip"></i></a></span>'+
+                                               ' <a id="view" data-toggle="modal"'+
+                                                'data-target="#modal_document" data-id="'+no+'" data-whatever="@getbootstrap"'+
+                                                ' href="#tt'+no+'" aria-expanded="true"><i class="fas fa-file-alt"title="View" data-toggle="tooltip"></i></a>'+
                                                 '</div>'+
                                                 '<p id="requestDoc'+no+'"></p></td>'+
-                                                ' </div></td><td></td> <td><a class="btn btn-sm btn-danger"  id="deletedraft'+no+'" confirm('+delete1+'); ><i class="fas fa-trash-alt fa-sm"></i></a></td> </tr>');
+                                                ' </div></td><td></td> <td align="middle"><a class="btn btn-sm btn-danger" id="deletedraft'+no+'" confirm('+delete1+'); ><i class="fas fa-trash-alt fa-sm"></i></a></td> </tr>');
                                            
                                                 $(document).ready(function () {
 
@@ -455,7 +455,7 @@ $(document).ready(function() {
             $("input[name='medical_report']").prop("checked", false);
 
         var no_row = $(e.relatedTarget).data('id');
-        console.log('Selected row: ' + no_row);
+        // console.log('Selected row: ' + no_row);
         
         var modal = $(this);
         modal.find('.submitModal').val(no_row);
@@ -471,13 +471,34 @@ $(document).ready(function() {
 
                 console.log(fav);
 
-                $('#requestDoc' + no_row).html(fav.join(", "));
+                function makeUL(fav) {
+                    // Create the list element:
+                    var list = document.createElement('ul');
 
-                console.log('Selected row fav: ' + no_row);
+                    for(var i = 0; i < fav.length; i++) {
+                        // Create the list item:
+                        var item = document.createElement('li');
+
+                        // Set its contents:
+                        item.appendChild(document.createTextNode(fav[i]));
+
+                        // Add it to the list:
+                        list.appendChild(item);
+                    }
+
+                    // Finally, return the constructed list:
+                    return list;
+                }
+
+                // document.getElementById('requestDoc' + no_row).appendChild(makeUL(fav));
+                $('#requestDoc' + no_row).html(makeUL(fav));
+
+                // console.log('Selected row fav: ' + no_row);
 
                 $('#modal_document').modal('hide');
             }else{
                 $('#modal_document').modal('hide');
+                
             }
         });
     });

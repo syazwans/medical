@@ -118,13 +118,6 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <div class="form-actions">
-                                            <a  class="btn btn waves-effect waves-light btn-success a1">Cancel</a>
-                                                <a  class="btn btn waves-effect waves-light btn-success a1">Back</a>
-                                    </div>
-                                    <div class="form-actions text-right">
-                                        <a class="btn btn waves-effect waves-light btn-success a1">Submit</a>
-                                    </div>
                                 </div> 
                             </div>
                         </div>

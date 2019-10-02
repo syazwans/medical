@@ -32,9 +32,7 @@
                                                                 value="@isset($cCase->schemerefno) {{$cCase->schemerefno}} @endisset"
                                                                 class="form-control" readonly>
                                                             <div class="input-group-append">
-                                                                <span class="input-group-text"
-                                                                    style="background-color: #d8e8e9;"><a
-                                                                        class="get-code" data-toggle="modal"
+                                                                        <a id="view" data-toggle="modal"
                                                                         data-target="#test"
                                                                         data-whatever="@getbootstrap" href="#tt1"
                                                                         aria-expanded="true"><i class="fas fa-file-alt"
@@ -44,12 +42,9 @@
                                                             </div>
 
                                                             &nbsp;<div class="input-group-append">
-                                                                <span class="input-group-text"
-                                                                    style="background-color: #d8e8e9;"><a
-                                                                        class="get-code" data-toggle="modal"
-                                                                        data-target="#opinion"
+                                                                <a id="view" data-toggle="modal" data-target="#opinion"
                                                                         data-whatever="@getbootstrap" href="#tt1"
-                                                                        aria-expanded="true"><i class="fas fa-history"
+                                                                        aria-expanded="true"><i class="fas fa-file-alt"
                                                                             title="History Opinion"
                                                                             data-toggle="tooltip"></i></a></span>
                                                                 @include('MedicalServices.noticeAccident.modal_historyOpinion')
@@ -139,11 +134,9 @@
                                                             <input type="text" value="@isset($cCase->schemerefno) {{$cCase->schemerefno}} @endisset"
                                                             class="form-control" readonly>
                                                         <div class="input-group-append">
-                                                            <span class="input-group-text"
-                                                                style="background-color: #d8e8e9;"><a class="get-code"
-                                                                    data-toggle="modal" data-target="#rtw"
-                                                                    data-whatever="@getbootstrap" href="#tt1"
-                                                                    aria-expanded="true"><i class="fas fa-file-alt"
+                                                           <a id="view" data-toggle="modal" data-target="#rtw"
+                                                            data-whatever="@getbootstrap" href="#tt1"
+                                                            aria-expanded="true"><i class="fas fa-file-alt"
                                                                     title="RTW Information" data-toggle="tooltip"></i></a></span>
                                                             @include('MedicalServices.noticeAccident.modal_rtw')
                                                         </div>
@@ -202,9 +195,7 @@
                                                             <input type="text" value="@isset($cCase->schemerefno) {{$cCase->schemerefno}} @endisset"
                                                             class="form-control" readonly>
                                                         <div class="input-group-append">
-                                                            <span class="input-group-text"
-                                                                style="background-color: #d8e8e9;"><a class="get-code"
-                                                                    data-toggle="modal" data-target="#medical"
+                                                            <a id="view" data-toggle="modal" data-target="#medical"
                                                                     data-whatever="@getbootstrap" href="#tt1"
                                                                     aria-expanded="true"><i class="fas fa-file-alt"
                                                                     title="Medical Board Information" data-toggle="tooltip"></i></a></span>
