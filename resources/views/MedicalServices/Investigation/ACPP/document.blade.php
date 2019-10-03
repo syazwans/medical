@@ -34,9 +34,7 @@
                                                                         <td>Medical Clarification Form</td>
                                                                         <td><div class="input-group ">
                                                                                 <div class="input-group-append">
-                                                                                    <span class="input-group-text"
-                                                                                        style="background-color: #d8e8e9;"><a
-                                                                                            class="get-code" data-toggle="modal"
+                                                                                    <a id="view" data-toggle="modal"
                                                                                             data-target="#clarification"
                                                                                             data-whatever="@getbootstrap" href="#tt1"
                                                                                             aria-expanded="true"><i class="fas fa-file-alt"

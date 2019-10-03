@@ -98,6 +98,7 @@
                                                 &nbsp;
                                                 <a id="deletedraft" data-toggle="modal" data-target="#modal_document" data-id="1" data-whatever="@getbootstrap"
                                                  href="#tt1" aria-expanded="true"><i class="fas fa-trash-alt fa-sm" title="Delete" data-toggle="tooltip"></i></a>
+                                                
                                                  &nbsp;
                                                 <a id='selectdraft' class="get-code" data-toggle="modal" data-target="#modal_document" data-id="1" data-whatever="@getbootstrap"
                                                  href="#tt1" aria-expanded="true"><i class="fas fa-edit" title="Edit" data-toggle="tooltip"></i></a>

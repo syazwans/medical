@@ -90,13 +90,13 @@
                                                             <td></td>
                                                             <td><div class="input-group-append">
                                                                     <a id="view"  href="#tt1" aria-expanded="true"><i class="fas fa-file-alt" title="Scheme Case/Supporting Doc
-                                                                        "data-toggle="tooltip"></i></a></span>
-                                                                    &nbsp;<span class="input-group-text" style="background-color: #d8e8e9;"><a class="get-code" href="#tt1" aria-expanded="true"><i class="fas fa-info-circle" title="Opinion Details
-                                                                        "data-toggle="tooltip"></i></a></span>
-                                                                    &nbsp;<span class="input-group-text" style="background-color: #d8e8e9;"><a class="get-code" href="#tt1" aria-expanded="true"><i class="fas fa-handshake" title="RTW Social Economic Report
-                                                                        "data-toggle="tooltip"></i></a></span>
-                                                                    &nbsp;<span class="input-group-text" style="background-color: #d8e8e9;"><a class="get-code" href="#tt1" aria-expanded="true"><i class="fas fa-users" title="RTW Report
-                                                                        "data-toggle="tooltip"></i></a></span>
+                                                                        "data-toggle="tooltip"></i></a>
+                                                                    &nbsp;<a id="view"" href="#tt1" aria-expanded="true"><i class="fas fa-file-alt" title="Opinion Details
+                                                                        "data-toggle="tooltip"></i></a>
+                                                                    &nbsp;<a id="view" href="#tt1" aria-expanded="true"><i class="fas fa-file-alt" title="RTW Social Economic Report
+                                                                        "data-toggle="tooltip"></i></a>
+                                                                    &nbsp;<a id="view" href="#tt1" aria-expanded="true"><i class="fas fa-file-alt" title="RTW Report
+                                                                        "data-toggle="tooltip"></i></a>
                                                                     
                                                                 </div></td>
                                                         </tbody>
@@ -150,8 +150,10 @@
                                                                 <td></td>
                                                                 <td></td>
                                                                 <td><div class="input-group-append">
-                                                                        <span class="input-group-text" style="background-color: #d8e8e9;"><a class="get-code" href="#tt1" aria-expanded="true"><i class="fas fa-file-alt" title="All Details + Supporting Doc
-                                                                            "data-toggle="tooltip"></i></a></span>
+                                                                        <!-- <span class="input-group-text" style="background-color: #d8e8e9;"><a class="get-code" href="#tt1" aria-expanded="true"><i class="fas fa-file-alt" title="All Details + Supporting Doc
+                                                                            "data-toggle="tooltip"></i></a></span> -->
+                                                                        <a id="view" href="#tt1" aria-expanded="true"><i class="fas fa-file-alt" title="All Details + Supporting Doc
+                                                                        "data-toggle="tooltip"></i></a>
                                                                     </div></td>
                                                             </tbody>
                                                         </table>
