@@ -98,7 +98,6 @@
             <div class="tab-pane p-20 active" id="appointments" role="tabpanel">
             @include('MedicalServices.ABPPP.appointment.createApp')
             </div>
-            
             <div class="tab-pane p-20" id="committees" role="tabpanel">
                 @include('MedicalServices.ABPPP.appointment.committee')
             </div>
@@ -106,6 +105,9 @@
             @include('MedicalServices.ABPPP.appointment.minutes')
                 
             </div>
+            
+            
+            
         </div>
     </div>
 </div>

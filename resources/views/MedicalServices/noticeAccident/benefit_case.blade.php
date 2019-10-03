@@ -27,7 +27,7 @@
                                                                 <thead>
                                                                     <th>No</th>
                                                                     <th>Start Date</th>
-                                                                    <th>End Type</th>
+                                                                    <th>End Date</th>
                                                                     <th>Employer Code</th>
                                                                     <th>Employer Name</th>
                                                                     <th>Occupation</th>
@@ -191,7 +191,7 @@
                                                         <table id="demo-foo-row-toggler" class="table table-bordered"
                                                             data-toggle-column="first">
                                                             <thead>
-                                                                <th>Bil.</th>
+                                                                <th>No.</th>
                                                                 <th>Type Of Equipment</th>
                                                                 <th>Diagnosis</th>
                                                                 <th>Date Of Delivery</th>

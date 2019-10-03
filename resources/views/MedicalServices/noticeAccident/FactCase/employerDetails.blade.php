@@ -9,7 +9,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="control-label">@lang('Employer Code :')</label>
+                    <label class="control-label">@lang('Industries Code :')</label>
                     <input type="text" value="@isset($FactC->empcode) {{$FactC->empcode}} @endisset" class="form-control" readonly>
                 </div>
             </div>

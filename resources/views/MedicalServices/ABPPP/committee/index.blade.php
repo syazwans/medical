@@ -102,6 +102,12 @@
                         class="hidden-xs-down">@lang('Query & Feedback')</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#recommendations" role="tab">
+                    <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
+                        class="hidden-xs-down">@lang('Recommendation')</span>
+                </a>
+            </li>
     
             
         </ul>
@@ -126,6 +132,10 @@
             </div>
             <div class="tab-pane p-20 " id="feedbacks" role="tabpanel">
                 @include('MedicalServices.ABPPP.committee.committee_query')
+
+            </div>
+            <div class="tab-pane p-20 " id="recommendations" role="tabpanel">
+                @include('MedicalServices.ABPPP.committee.recommendation')
 
             </div>
            
