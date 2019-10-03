@@ -73,7 +73,7 @@
         <!-- Nav tabs -->
         <ul class="nav customtab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#appointments" role="tab"><span 
+                <a class="nav-link active" data-toggle="tab" href="#appointments" role="tab"><span 
                         class="hidden-sm-up"><i class="ti-notepad"></i></span> <span 
                         class="hidden-xs-down">@lang('Appointment')</span>
                 </a>
@@ -95,19 +95,80 @@
         <!-- Tab panes -->
         <div class="tab-content tabcontent-border">
 
-            <div class="tab-pane p-20 " id="minutes" role="tabpanel">
-                @include('MedicalServices.ABPPP.appointment.minutes')
-
+            <div class="tab-pane p-20 active" id="appointments" role="tabpanel">
+            @include('MedicalServices.ABPPP.appointment.createApp')
             </div>
             
             <div class="tab-pane p-20" id="committees" role="tabpanel">
                 @include('MedicalServices.ABPPP.appointment.committee')
             </div>
-            <div class="tab-pane p-20 active" id="appointments " role="tabpanel">
-                @include('MedicalServices.ABPPP.appointment.createApp')
+            <div class="tab-pane p-20" id="minutes" role="tabpanel">
+            @include('MedicalServices.ABPPP.appointment.minutes')
+                
             </div>
         </div>
     </div>
 </div>
 
 @endsection
+
+@section('script')
+<script>
+    // DataTable
+    var table = $('#committeeTable').DataTable({
+        "paging":   false,
+        "ordering": false,
+        "info":     false,
+        sDom: 'lrtip'
+    });
+
+    // Apply the search
+    table.columns(0).every(function () {
+        var that = this;
+        
+        $('#commit_no').on('keyup change', function () {
+            if (that.search() !== this.value) {
+                that
+                    .search(this.value)
+                    .draw();
+            }
+        });
+    });
+
+
+// 	$(document).ready(function () {
+// 		var language= $('#change_language').val();
+// 		if(language=="BM"){
+//       //$('#malay').addClass("ti-check");
+//       //$('#english').removeClass("ti-check");
+      
+//       //chg07072019 - irina
+//       $('#malay').css("cssText", "font-weight:bold !important;");
+//       $('#english').css("cssText", "font-weight:normal !important;");
+
+//       $('#committeeTable').DataTable({
+      	
+//       	language: {
+//       		"url": "//cdn.datatables.net/plug-ins/1.10.19/i18n/Malay.json"
+//       	},
+//       });
+//       $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+//   }
+//   else{
+//       //$('#english').addClass("ti-check");
+//       //$('#malay').removeClass("ti-check");
+      
+//       $('#committeeTable').DataTable({
+      	
+//       });
+//       $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+//       //chg07072019 - irina
+//       $('#malay').css("cssText", "font-weight:normal !important;");
+//       $('#english').css("cssText", "font-weight:bold !important;");
+
+//   }
+// });
+</script>
+
+@endsection
+

@@ -120,8 +120,8 @@
                 </div>
                 {{-- </div>--}}
             </div> <br><br>
-            <div class="table-responsive m-t-40">
-                <table id="myTable"  class="table table-bordered table-striped">
+            <div class="table-responsive">
+            <table id="myTable" class="table table-bordered" data-toggle-column="first">
                     <thead style="background-color:skyblue;">
                         <tr>
                             <th>No.</th>

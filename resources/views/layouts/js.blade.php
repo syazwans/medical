@@ -300,13 +300,30 @@
             });
         });
     });
-    $('#example23').DataTable({
-        dom: 'Bfrtip',
-        buttons: [
-            'copy', 'csv', 'excel', 'pdf', 'print'
-        ]
-    });
-    $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+//     $('#example23').DataTable({
+//         dom: 'Bfrtip',
+//         buttons: [
+//             'copy', 'csv', 'excel', 'pdf', 'print'
+//         ]
+//     });
+//     $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+
+//     // DataTable
+//     var table = $('#example23').DataTable();
+
+// // Apply the search
+// table.columns(0).every(function () {
+//     var that = this;
+
+//     $('#commit_no').on('keyup change', function () {
+//        alert('sdsds');
+//         if (that.search() !== this.value) {
+//             that
+//                 .search(this.value)
+//                 .draw();
+//         }
+//     });
+// });
     </script>
 
 <script>

@@ -71,6 +71,31 @@
                                             <input type="text" value="" class="form-control" >
                                         </div>
                                     </div>
+
+                                    
+                                    <div class="col-12">
+                                        <div class="table-responsive">
+                                            <table id="demo-foo-row-toggler" class="table table-bordered"
+                                                data-toggle-column="first">
+                                                <thead>
+                                                    <th>MO Reference No.</th>
+                                                    <th>Insured Person Name</th>
+                                                    <th>Identification No.</th>
+                                                    <th>JD Date</th>
+                                                    <th>Status</th>
+                                                </thead>
+                                                <tbody>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                
+                                
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="control-label">Closing :</label>
