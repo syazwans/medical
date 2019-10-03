@@ -10,7 +10,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="control-label">@lang('Identification No :')</label>
+                    <label class="control-label">@lang('ID No :')</label>
                     <input type="text" value="@isset($FactC->idno) {{$FactC->idno}} @endisset" class="form-control" readonly>
                 </div>
             </div>

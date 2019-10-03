@@ -73,7 +73,7 @@
         <!-- Nav tabs -->
         <ul class="nav customtab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#appointments" role="tab"><span 
+                <a class="nav-link active" data-toggle="tab" href="#appointments" role="tab"><span 
                         class="hidden-sm-up"><i class="ti-notepad"></i></span> <span 
                         class="hidden-xs-down">@lang('Appointment')</span>
                 </a>
@@ -94,18 +94,19 @@
         </ul>
         <!-- Tab panes -->
         <div class="tab-content tabcontent-border">
-
+            <div class="tab-pane p-20 active" id="appointments " role="tabpanel">
+                @include('MedicalServices.ABPPP.appointment.createApp')
+            </div>
+            <div class="tab-pane p-20" id="committees" role="tabpanel">
+                @include('MedicalServices.ABPPP.appointment.committee')
+            </div>
             <div class="tab-pane p-20 " id="minutes" role="tabpanel">
                 @include('MedicalServices.ABPPP.appointment.minutes')
 
             </div>
             
-            <div class="tab-pane p-20" id="committees" role="tabpanel">
-                @include('MedicalServices.ABPPP.appointment.committee')
-            </div>
-            <div class="tab-pane p-20 active" id="appointments " role="tabpanel">
-                @include('MedicalServices.ABPPP.appointment.createApp')
-            </div>
+            
+            
         </div>
     </div>
 </div>

@@ -130,7 +130,7 @@
                                                             </div>
                                                             <p id="requestDoc1"></p>
                                                         </td>
-                                                        <td></td>
+                                                        <td><input type="text" value="" class="form-control" ></td>
                                                         <td></td>
                                                     </tr>
                                                 </tbody>

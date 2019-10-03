@@ -172,7 +172,23 @@
                                                                     <div class="row p-t-20">
                                                                         <div class="col-md-12">
                                                                             <div class="form-group">
+                                                                                <label class="control-label">@lang('Accident Details :')</label>
+                                                                                <input type="text"
+                                                                                    value=""
+                                                                                    class="form-control" readonly>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12">
+                                                                            <div class="form-group">
                                                                                 <label class="control-label">@lang('Purpose Of Referral :')</label>
+                                                                                <input type="text"
+                                                                                    value=""
+                                                                                    class="form-control" readonly>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12">
+                                                                            <div class="form-group">
+                                                                                <label class="control-label">@lang('Accident Details :')</label>
                                                                                 <input type="text"
                                                                                     value=""
                                                                                     class="form-control" readonly>
