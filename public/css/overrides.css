@@ -499,14 +499,14 @@ a#selectdraft{
 a#deletedraft{
     background-color:#e56c69 !important;
     color:white !important;
-    /* padding-left: 12px !important;
+    padding-left: 12px !important;
     padding-right: 12px !important;
     padding-top: 5px !important;
     padding-bottom: 8px !important;
     border-radius: 10%;
     margin-top:5px !important;
     margin-bottom:5px !important;
-    margin-right:5px !important; */
+    margin-right:5px !important;
 }
 
 a#view{

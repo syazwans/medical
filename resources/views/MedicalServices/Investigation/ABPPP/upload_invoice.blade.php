@@ -48,7 +48,11 @@
                                         <div class="form-group">
                                             <label class="control-label">@lang('Place of Investigation :')</label>
                                             <input type="text" value="" class="form-control" readonly>
+                                        </div>
+                                        <div class="form-group">
                                             <input type="text" value="" class="form-control" readonly>
+                                        </div>
+                                        <div class="form-group">
                                             <input type="text" value="" class="form-control" readonly>
                                         </div>
                                     </div>
