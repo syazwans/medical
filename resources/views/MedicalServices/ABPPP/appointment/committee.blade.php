@@ -24,8 +24,7 @@
                                 <div class="row p-t-20">
                                     <div class="col-12">
                                         <div class="table-responsive">
-                                            <table id="committeeTable" class="table table-bordered"
-                                                data-toggle-column="first">
+                                            <table id="committeeTable" class="table table-bordered" data-toggle-column="first">
                                                 <thead>
                                                     <th>Meeting Reference No.</th>
                                                     <th>Date time</th>
@@ -39,8 +38,7 @@
                                                     <td></td>
                                                     <td></td>
                                                     <td><div class="input-group-append">
-                                                    <a id="view" data-toggle="modal" data-target="#modal_document" data-id="1" data-whatever="@getbootstrap"
-                                                 href="#tt1" aria-expanded="true"><i class="fas fa-file-alt" title="View" data-toggle="tooltip"></i></a>
+                                                    <a id="view" onclick="committeeHideShow();" aria-expanded="true"><i class="fas fa-file-alt" title="View" data-toggle="tooltip"></i></a>
 
                                                     </div></td>
                                                 </tbody>
@@ -51,8 +49,8 @@
 
                                 <div class="row p-t-20">
                                     <div class="col-12">
-                                        <div class="table-responsive">
-                                            <table id="example23" class="table table-bordered"
+                                        <div class="table-responsive" id="showTable" style="display:none;">
+                                            <table id="table1" class="table table-bordered" 
                                                 data-toggle-column="first">
                                                 <thead>
                                                     <th>No.</th>
@@ -68,15 +66,18 @@
                                                     <td></td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td></td>
+                                                    <td><div class="input-group-append">
+                                                    <a id="view" onclick="showAccordion();" aria-expanded="true"><i class="fas fa-file-alt" title="View" data-toggle="tooltip"></i></a>
+
+                                                    </div></td>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="accordion1" role="tablist" aria-multiselectable="true">
-                                <div class="card">
+                            <div id="accordionShow" role="tablist" aria-multiselectable="true"  style="display:none;">
+                                <div class="card" >
                                     <div class="card-header" role="tab" id="headingOne">
                                         <h5 class="mb-0">
                                             <a class="link" data-toggle="collapse" data-parent="#accordion1"
@@ -166,7 +167,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            
                             <div class="card ">
                                 <div class="card-header" role="tab" id="headingTwo">
                                     <h5 class="mb-0">
@@ -401,8 +402,10 @@
                                         </div>
                                     </div>
                                 </div>
+                                </div>
+                                @include('MedicalServices.noticeAccident.medical_opinion')
                             </div>
-                            @include('MedicalServices.noticeAccident.medical_opinion')
+                           
                         </div>
                     </div>
                 </form>
@@ -410,3 +413,24 @@
         </div>
     </div>
 </div>
+
+
+
+
+<script type="text/javascript">
+    function committeeHideShow(){
+            $('#showTable').show();
+    }
+
+    function showAccordion(){
+            $('#accordionShow').show();
+    }
+</script>
+
+<!-- <script>
+function show(nr) {
+    document.getElementById("table1").style.display="none";
+    document.getElementById("table"+nr).style.display="block";
+}
+
+<script> -->
