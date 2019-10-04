@@ -99,12 +99,16 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="control-label">Closing :</label>
-                                            <input type="text" value="" class="form-control" >
+                                            <textarea type="text" rows="3" class="form-control"></textarea>
                                         </div>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
+                        <div class="form-actions">
+                                        <a class="btn btn waves-effect waves-light btn-success a1">Preview/Save</a>
+                                    </div>
                     </div>
                 </form>
             </div>

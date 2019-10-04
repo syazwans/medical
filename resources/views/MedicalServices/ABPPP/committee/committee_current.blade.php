@@ -32,26 +32,20 @@
                                                                 value="@isset($cCase->schemerefno) {{$cCase->schemerefno}} @endisset"
                                                                 class="form-control" readonly>
                                                             <div class="input-group-append">
-                                                                <span class="input-group-text"
-                                                                    style="background-color: #d8e8e9;"><a
-                                                                        class="get-code" data-toggle="modal"
-                                                                        data-target="#test"
-                                                                        data-whatever="@getbootstrap" href="#tt1"
-                                                                        aria-expanded="true"><i class="fas fa-file-alt"
-                                                                            title="Scheme Case
+                                                                <a id="view" data-toggle="modal" data-target="#test"
+                                                                    data-whatever="@getbootstrap" href="#tt1"
+                                                                    aria-expanded="true"><i class="fas fa-file-alt"
+                                                                        title="Scheme Case
                                                                         " data-toggle="tooltip"></i></a></span>
                                                                 @include('MedicalServices.noticeAccident.test')
                                                             </div>
 
                                                             &nbsp;<div class="input-group-append">
-                                                                <span class="input-group-text"
-                                                                    style="background-color: #d8e8e9;"><a
-                                                                        class="get-code" data-toggle="modal"
-                                                                        data-target="#opinion"
-                                                                        data-whatever="@getbootstrap" href="#tt1"
-                                                                        aria-expanded="true"><i class="fas fa-history"
-                                                                            title="History Opinion"
-                                                                            data-toggle="tooltip"></i></a></span>
+                                                                <a id="view" data-toggle="modal" data-target="#opinion"
+                                                                    data-whatever="@getbootstrap" href="#tt1"
+                                                                    aria-expanded="true"><i class="fas fa-file-alt"
+                                                                        title="History Opinion"
+                                                                        data-toggle="tooltip"></i></a></span>
                                                                 @include('MedicalServices.noticeAccident.modal_historyOpinion')
                                                             </div>
                                                         </div>
@@ -135,18 +129,18 @@
 
                                                         <label class="control-label">@lang('RTW Ref. No.
                                                             :')</label>
-                                                            <div class="input-group ">
-                                                            <input type="text" value="@isset($cCase->schemerefno) {{$cCase->schemerefno}} @endisset"
-                                                            class="form-control" readonly>
-                                                        <div class="input-group-append">
-                                                            <span class="input-group-text"
-                                                                style="background-color: #d8e8e9;"><a class="get-code"
-                                                                    data-toggle="modal" data-target="#rtw"
+                                                        <div class="input-group ">
+                                                            <input type="text"
+                                                                value="@isset($cCase->schemerefno) {{$cCase->schemerefno}} @endisset"
+                                                                class="form-control" readonly>
+                                                            <div class="input-group-append">
+                                                                <a id="view" data-toggle="modal" data-target="#rtw"
                                                                     data-whatever="@getbootstrap" href="#tt1"
                                                                     aria-expanded="true"><i class="fas fa-file-alt"
-                                                                    title="RTW Information" data-toggle="tooltip"></i></a></span>
-                                                            @include('MedicalServices.noticeAccident.modal_rtw')
-                                                        </div>
+                                                                        title="RTW Information"
+                                                                        data-toggle="tooltip"></i></a></span>
+                                                                @include('MedicalServices.noticeAccident.modal_rtw')
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -199,17 +193,17 @@
 
                                                         <label class="control-label">@lang('MB Ref. No. :')</label>
                                                         <div class="input-group ">
-                                                            <input type="text" value="@isset($cCase->schemerefno) {{$cCase->schemerefno}} @endisset"
-                                                            class="form-control" readonly>
-                                                        <div class="input-group-append">
-                                                            <span class="input-group-text"
-                                                                style="background-color: #d8e8e9;"><a class="get-code"
-                                                                    data-toggle="modal" data-target="#medical"
+                                                            <input type="text"
+                                                                value="@isset($cCase->schemerefno) {{$cCase->schemerefno}} @endisset"
+                                                                class="form-control" readonly>
+                                                            <div class="input-group-append">
+                                                                <a id="view" data-toggle="modal" data-target="#medical"
                                                                     data-whatever="@getbootstrap" href="#tt1"
                                                                     aria-expanded="true"><i class="fas fa-file-alt"
-                                                                    title="Medical Board Information" data-toggle="tooltip"></i></a></span>
-                                                            @include('MedicalServices.noticeAccident.modal_medical')
-                                                        </div>
+                                                                        title="Medical Board Information"
+                                                                        data-toggle="tooltip"></i></a></span>
+                                                                @include('MedicalServices.noticeAccident.modal_medical')
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -238,9 +232,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
+            </div>
             </form>
         </div>
     </div>
 </div>
-    

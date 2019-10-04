@@ -403,7 +403,7 @@
                                     </div>
                                 </div>
                                 </div>
-                                @include('MedicalServices.noticeAccident.medical_opinion')
+                                @include('MedicalServices.ABPPP.appointment.medical_opinion_committee')
                             </div>
                            
                         </div>
