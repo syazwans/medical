@@ -32,9 +32,9 @@
 
 
 {{-- <script src="/PERKESO_UI/assets/node_modules/moment/moment.js"></script> --}}
-<script
-    src="/PERKESO_UI/assets/node_modules/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js">
-</script>
+<!-- Plugin JavaScript -->
+<script src="/PERKESO_UI/assets/node_modules/moment/moment.js"></script>
+<script src="/PERKESO_UI/assets/node_modules/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
 <!-- Clock Plugin JavaScript -->
 <script src="/PERKESO_UI/assets/node_modules/clockpicker/dist/jquery-clockpicker.min.js"></script>
 <!-- Color Picker Plugin JavaScript -->
@@ -46,6 +46,7 @@
 <!-- Date range Plugin JavaScript -->
 <script src="/PERKESO_UI/assets/node_modules/timepicker/bootstrap-timepicker.min.js"></script>
 <script src="/PERKESO_UI/assets/node_modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+
 
 <script src="/PERKESO_UI/assets/node_modules/wizard/jquery.steps.min.js"></script>
 <script src="/PERKESO_UI/assets/node_modules/wizard/jquery.validate.min.js"></script>
@@ -117,7 +118,7 @@
         $('#headingthree').hide();
         $('#headingfour').hide();
         $('#collapseone').hide();
-                $('#hello').hide();
+        $('#hello').hide();
         $('select[name=moreinfo]').change(function () {
             if (this.value == 'N') {
                 $('.default').show();
@@ -184,10 +185,8 @@
         });
     }); 
 
-
-    
-    // MAterial Date picker    
-    $('#mdate').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+     // MAterial Date picker    
+     $('#mdate').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
     $('#timepicker').bootstrapMaterialDatePicker({ format: 'HH:mm', time: true, date: false });
     $('#date-format').bootstrapMaterialDatePicker({ format: 'dddd DD MMMM YYYY - HH:mm' });
 
