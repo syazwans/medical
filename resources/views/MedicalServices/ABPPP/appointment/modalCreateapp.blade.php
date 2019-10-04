@@ -15,12 +15,29 @@
                                     <input type="date" value="" class="form-control" >
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label class="control-label">@lang('Time :')</label>
-                                    <input type="time" id="id_diagnosis" value="" class="form-control" >
+                            {{-- <div class="col-md-3"> --}}
+                                {{-- <div class="form-group">
+                                    <label class="input-group ">@lang('Time :')</label>
+                                    <input type="text" value="13:14"  id="id_diagnosis" value="" class="form-control clockpicker" >
+                                </div> --}}
+                                {{-- <div class="input-group">
+                                    <input type="text" class="form-control" id="datepicker-autoclose" placeholder="mm/dd/yyyy">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="icon-calender"></i></span>
+                                    </div>
+                                </div> --}}
+
+                                <div class="col-md-6">
+                                    <label class="m-t-20">Time</label>
+                                    <div class="input-group clockpicker " data-placement="bottom" data-align="top" data-autoclose="true">
+                                        <input type="text" class="form-control" value="">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text"><i class="fa fa-clock-o"></i></span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            {{-- </div> --}}
+                            
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="control-label">@lang('Place :')</label>

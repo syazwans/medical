@@ -509,32 +509,6 @@ a#deletedraft{
     margin-right:5px !important;
 }
 
-a#view{
-    background-color:#5367db !important;
-    color:white !important;
-    padding-left: 12px !important;
-    padding-right: 12px !important;
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
-    border-radius: 10%;
-    margin-top:5px !important;
-    margin-bottom:5px !important;
-    margin-right:5px !important;
-}
-
-a#uploaddraft{
-    background-color:#07e9b0 !important;
-    color:white !important;
-    padding-left: 12px !important;
-    padding-right: 12px !important;
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
-    border-radius: 10%;
-    margin-top:5px !important;
-    margin-bottom:5px !important;
-    margin-right:5px !important;
-}
-
 
 #tblwb th{
     padding:5px !important;
@@ -656,8 +630,8 @@ a#english, a#malay{
 }
 
 /* div#test{
-    width:50% !important;
-    height:25% !important;
+    width:70% !important;
+    height:50% !important;
     background-color:blue !important;
     position: left !important;
 } */
