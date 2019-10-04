@@ -18,7 +18,12 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label class="control-label">@lang('Time :')</label>
-                                    <input type="time" id="id_diagnosis" value="" class="form-control" >
+                                    <div class="input-group clockpicker">
+                                    <input text="time" id="id_diagnosis" value="" class="form-control" >
+                                    <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fa fa-clock-o"></i></span>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -75,3 +80,4 @@
     <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
+
