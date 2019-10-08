@@ -121,7 +121,7 @@
                 {{-- </div>--}}
             </div> <br><br>
             <div class="table-responsive">
-            <table id="myTable" class="table table-bordered" data-toggle-column="first">
+            <table id="workbasketTable" class="table table-bordered" data-toggle-column="first">
                     <thead style="background-color:skyblue;">
                         <tr>
                             <th>No.</th>
@@ -285,7 +285,7 @@
 <script src="{{asset('PERKESO_UI/assets/node_modules/datatables/datatables.min.js')}}"></script>
 <script>
     $(function () {
-        $('#myTable').DataTable({
+        $('#workbasketTable').DataTable({
             // Sort desc for column date
             "order": [
                 [0, 'desc'],
@@ -342,7 +342,7 @@
     // Searching using text field
     $(document).ready(function () {
         // DataTable
-        var table = $('#myTable').DataTable();
+        var table = $('#workbasketTable').DataTable();
 
         // Apply the search
         table.columns(5).every(function () {
