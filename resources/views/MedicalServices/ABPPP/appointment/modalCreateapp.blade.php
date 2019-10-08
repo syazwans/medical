@@ -57,13 +57,13 @@
                             <div class="col-md-11 offset-11 p-t-20">
                             <div class="col-md-1">
                                 <div class="form-group">
-                                    <button type="button" id="add_panel" class="btn-success link a1" data-toggle="collapse" aria-expanded="true">Add</button>
+                                    <button type="button" id="btn_appointment_modal" class="btn-success link a1" data-toggle="collapse" aria-expanded="true">Add</button>
                                 </div>
                             </div>
                             </div>
                             <div class="col-md-12" id="panel">
                                 <div class="table-responsive">
-                                    <table id="table_panel" class="table table-bordered"
+                                    <table id="myTable_appointment" class="table table-bordered"
                                         data-toggle-column="first">
                                         <thead>
                                             <tr>
@@ -74,9 +74,7 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>1 </td>
-                                                <td><input type="text" id="id_diagnosis" value="" class="form-control" ></td>
-                                                <td></td>
+                                                <td style="display:none;"><input type="hidden" value="0"></td>
                                             </tr>
                                         </tbody>
                                     </table>

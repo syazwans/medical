@@ -376,6 +376,25 @@ $("#btn_diagnosis").click(function () {
         });
     });
 
+
+    $("#btn_appointment_modal").click(function () {
+        var no = $('#myTable_appointment tr:last td:first').find("input").val();
+        var delete2 = "('Are you sure want to delete the draft?')";
+        no++;
+        // var no = no++;
+        $('#myTable_appointment > tbody:last-child').append('<tr id="'+no+'">'+
+        ' <td style="display:none;"><input type="hidden" value="'+no+'"></td><td>'+no+'</td> <td>' +
+        ' <input type="text" value="" class="form-control"></td>' +
+          '<td><a class="btn btn-sm btn-danger"  id="deletedraft'+no+'" confirm('+delete2+'); ><i class="fas fa-trash-alt fa-sm"></i></a></td> </tr>');
+        $('#deletedraft'+no+'').click(function(){
+            alert('Are you sure want to delete the draft? ');
+
+            $('#myTable_appointment').each(function(){
+            $('#appoint'+no+'').remove();
+        });
+        });
+    });
+
     $("#btn_moei_investigation").click(function () {
         var no = $('#myTable_moei_investigation tr:last td:first').find("input").val();
         var delete1 = "('Are you sure want to delete the draft?')";
