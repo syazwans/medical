@@ -55,19 +55,19 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="control-label">Approval of Minutes :</label>
-                                            <input type="text" value="" class="form-control" >
+                                            <textarea type="text" rows="3" class="form-control"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="control-label">Reports :</label>
-                                            <input type="text" value="" class="form-control" >
+                                            <textarea type="text" rows="3" class="form-control"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="control-label">Agenda Review :</label>
-                                            <input type="text" value="" class="form-control" >
+                                            <textarea type="text" rows="3" class="form-control"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-12">

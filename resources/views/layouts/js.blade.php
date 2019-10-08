@@ -381,7 +381,7 @@ $("#btn_diagnosis").click(function () {
         var delete2 = "('Are you sure want to delete the draft?')";
         no++;
         // var no = no++;
-        $('#myTable_appointment > tbody:last-child').append('<tr id="appoint'+no+'">'+
+        $('#myTable_appointment > tbody:last-child').append('<tr id="'+no+'">'+
         ' <td style="display:none;"><input type="hidden" value="'+no+'"></td><td>'+no+'</td> <td>' +
         ' <input type="text" value="" class="form-control"></td>' +
           '<td><a class="btn btn-sm btn-danger"  id="deletedraft'+no+'" confirm('+delete2+'); ><i class="fas fa-trash-alt fa-sm"></i></a></td> </tr>');
