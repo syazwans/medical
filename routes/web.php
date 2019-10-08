@@ -245,6 +245,9 @@ Route::get('/aocpp', function () {
 Route::get('/committee', function () {  
     return view('MedicalServices.ABPPP.committee.index');
 });
+Route::get('/blank', function () {  
+    return view('MedicalServices.ABPPP.appointment.blank');
+});
 
 
 

@@ -7,14 +7,13 @@
                         <h4 class="card-title">@lang('Minutes of Meeting')</h4>
                         <div class="modal-body">
                             <div class="card-body">
-                                
-                                </div>
-                                <div class="row">
-                                        <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label class="control-label">Meeting Reference No.</label>
-                                                    <input type="text" value="" class="form-control" readonly>
-                                                </div>
+                                <div class="row p-t-20">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Meeting Reference No.</label>
+                                            <input type="text" value="" class="form-control" readonly>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="row p-t-20">
                                     <div class="col-md-8">
@@ -71,8 +70,6 @@
                                             <input type="text" value="" class="form-control" >
                                         </div>
                                     </div>
-
-                                    
                                     <div class="col-12">
                                         <div class="table-responsive">
                                             <table id="demo-foo-row-toggler" class="table table-bordered"
@@ -94,8 +91,6 @@
                                             </table>
                                         </div>
                                     </div>
-                                
-                                
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="control-label">Closing :</label>

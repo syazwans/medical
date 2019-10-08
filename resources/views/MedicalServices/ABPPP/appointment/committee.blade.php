@@ -403,7 +403,7 @@
                                     </div>
                                 </div>
                                 </div>
-                                @include('MedicalServices.noticeAccident.medical_opinion')
+                                @include('MedicalServices.ABPPP.appointment.decision_appointment')
                             </div>
                            
                         </div>
@@ -425,6 +425,9 @@
     function showAccordion(){
             $('#accordionShow').show();
     }
+
+
+
 </script>
 
 <!-- <script>

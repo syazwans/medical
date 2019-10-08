@@ -97,6 +97,7 @@
                 <ul aria-expanded="false" class="collapse">
                     <li><a href="/newcase">@lang('New Case')</a></li>
                     <li><a href="/reportstatus">@lang('Report Status')</a></li>
+                    <li></li>
     
                 </ul>
                 </li>

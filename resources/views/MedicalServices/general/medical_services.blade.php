@@ -154,6 +154,7 @@
                     <td><a id='selectdraft' href="{{route ('accident')}}"><i class="fas fa-edit"></i></a></td>
                      </tbody>
                      <tbody>
+                         <tr>
                             <td>2</td>
                             <td>22/11/2020</td>
                             <td>4</td>
@@ -165,8 +166,9 @@
                             <td>Medical Opinion</td>
                             <td>New</td>
                             <td><a id='selectdraft' href="{{route ('invadility')}}"><i class="fas fa-edit"></i></a></td>
-                         </tbody>
-                         <tbody>
+                         </tr>
+                         
+                         <tr>
                             <td>3</td>
                             <td>22/9/2020</td>
                             <td>2</td>
@@ -178,8 +180,8 @@
                             <td>Medical Opinion</td>
                             <td>New</td>
                             <td><a id='selectdraft' href="{{route ('od')}}"><i class="fas fa-edit"></i></a></td>
-                        </tbody>
-                        <tbody>
+                         </tr>
+                         <tr>
                             <td>4</td>
                             <td>9/9/2020</td>
                             <td>4</td>
@@ -191,8 +193,8 @@
                             <td>Medical Opinion</td>
                             <td>New</td>
                             <td><a id='selectdraft' href="/index"><i class="fas fa-edit"></i></a></td>
-                        </tbody>
-                        <tbody>
+                         </tr>
+                         <tr>
                             <td>5</td>
                             <td>21/9/2020</td>
                             <td>2</td>
@@ -204,8 +206,8 @@
                             <td>Medical Investigation Internal</td>
                             <td>New</td>
                             <td><a id='selectdraft'href="{{route ('investigate_internal')}}"><i class="fas fa-edit"></i></a></td>
-                        </tbody>
-                        <tbody>
+                         </tr>
+                         <tr>
                             <td>6</td>
                             <td>11/2/2020</td>
                             <td>2</td>
@@ -217,8 +219,8 @@
                             <td>Medical Investigation Internal</td>
                             <td>New</td>
                             <td><a id='selectdraft' href="{{route ('investigate_internal_abppp')}}"><i class="fas fa-edit"></i></a></td>
-                        </tbody>
-                        <tbody>
+                         </tr>
+                         <tr>
                             <td>7</td>
                             <td>1/6/2020</td>
                             <td>5</td>
@@ -230,8 +232,8 @@
                             <td>Medical Investigation Special Report</td>
                             <td>New</td>
                             <td><a id='selectdraft' href="{{route ('special_report')}}"><i class="fas fa-edit"></i></a></td>
-                        </tbody>
-                        <tbody>
+                         </tr>
+                         <tr>
                             <td>8</td>
                             <td>9/6/2020</td>
                             <td>4</td>
@@ -243,8 +245,8 @@
                             <td>Medical Investigation Special Report</td>
                             <td>New</td>
                             <td><a id='selectdraft' href="{{route ('special_report_aobppp')}}"><i class="fas fa-edit"></i></a></td>
-                        </tbody>
-                        <tbody>
+                         </tr>
+                         <tr>
                             <td>9</td>
                             <td>2/6/2020</td>
                             <td>4</td>
@@ -256,8 +258,8 @@
                             <td>Medical Investigation Clarification</td>
                             <td>New</td>
                             <td><a id='selectdraft' href="/acpp"><i class="fas fa-edit"></i></a></td>
-                        </tbody>
-                        <tbody>
+                         </tr>
+                         <tr>
                             <td>10</td>
                             <td>9/3/2020</td>
                             <td>4</td>
@@ -269,6 +271,7 @@
                             <td>Medical Investigation Clarification</td>
                             <td>New</td>
                             <td><a id='selectdraft' href="/aocpp"><i class="fas fa-edit"></i></a></td>
+                         </tr>
                         </tbody>
                 </table>
             </div>

@@ -327,6 +327,7 @@
 
 <script>
     $(document).ready(function(){
+        // alert('syauqibongok');
         // Add minus icon for collapse element which is open by default
         $(".collapse.show").each(function(){
         $(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
@@ -397,6 +398,15 @@ $("#btn_diagnosis").click(function () {
         });
         });
     });
+
+    // $('#chairperson2').hide();
+
+    // $('#add_chairperson').click(function() {
+
+    //     $('#chairperson2').show();
+
+    // });
+
 
     $("#btn_query").click(function () {
         var no = $('#myTable_query tr:last td:first').find("input").val();
