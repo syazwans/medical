@@ -403,7 +403,11 @@
                                     </div>
                                 </div>
                                 </div>
+<<<<<<< HEAD
                                 @include('MedicalServices.ABPPP.appointment.decision_appointment')
+=======
+                                @include('MedicalServices.ABPPP.appointment.medical_opinion_committee')
+>>>>>>> 0ac4ea917bfd45c4daa6a49301d8b27dcb3c7a75
                             </div>
                            
                         </div>
