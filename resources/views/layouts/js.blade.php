@@ -393,6 +393,33 @@ $("#btn_diagnosis").click(function () {
         });
         });
     });
+    $('#btn_create').click(function () {
+    // alert('syauqigila');
+        var meeting = $('#id_meeting').val();
+        var date = $('#create_date').val();
+        var time = $('#create_time').val();
+        var delete1 = "('Are you sure want to delete the draft?')";
+        var no = $('#myTable_create tr:last td:first').find("input").val();
+        no++;
+        // var no_index = no++
+        $('#myTable_create > tbody:last-child').append('<tr id="create'+no+'">'+
+                                                            '<td style="display:none;"><input type="hidden" value="'+no+'"></td>'+
+                                                            '<td>'+meeting+'</td>'+
+                                                            '<td>'+date+'</td>'+
+                                                            '<td>'+time+'</td>'+
+                                                            '<td></td>'+
+                                                            '<td></td>'+
+                                                            '<td><a class="btn btn-sm btn-danger" id="deletedraft2'+no+'" confirm('+delete1+'); ><i class="fas fa-trash-alt fa-sm"></i></a></td>'+
+                                                            '</tr>');
+
+        $('#deletedraft2'+no+'').click(function(){
+            alert('Are you sure want to delete the draft? ');
+
+            $('#myTable_create').each(function(){
+            $('#create'+no+'').remove();
+        });
+        });
+    });
 
     $("#btn_moei_investigation").click(function () {
         var no = $('#myTable_moei_investigation tr:last td:first').find("input").val();
@@ -447,8 +474,8 @@ $("#btn_diagnosis").click(function () {
                                                 'data-target="#modal_document" data-id="'+no+'" data-whatever="@getbootstrap"'+
                                                 ' href="#tt'+no+'" aria-expanded="true"><i class="fas fa-file-alt"title="View" data-toggle="tooltip"></i></a>'+
                                                 '</div>'+
-                                                '<p id="requestDoc'+no+'"></p></td>'+
-                                                ' </div></td><td></td> <td align="middle"><a class="btn btn-sm btn-danger" id="deletedraft'+no+'" confirm('+delete1+'); ><i class="fas fa-trash-alt fa-sm"></i></a></td> </tr>');
+                                                '<p id="requestDoc'+no+'"></p></td> <td><input type="text" value="" class="form-control" ></td>'+
+                                                ' </div></td> <td align="middle"><a class="btn btn-sm btn-danger" id="deletedraft'+no+'" confirm('+delete1+'); ><i class="fas fa-trash-alt fa-sm"></i></a></td> </tr>');
                                            
                                                 $(document).ready(function () {
 
