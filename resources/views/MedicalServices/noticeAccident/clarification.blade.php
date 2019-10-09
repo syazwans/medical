@@ -20,13 +20,13 @@
                                                 <input type="text" value="" class="form-control" readonly>
                                             </div>
                                         </div>
-                                        <div class="col-md-7">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="control-label">@lang('ID No. :')</label>
                                                 <input type="text" value="" class="form-control" readonly>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="control-label">@lang('Date :')</label>
                                                 <input type="text" value="" class="form-control" readonly>
@@ -96,22 +96,22 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="control-label">Doctor Name :</label>
-                                            <input type="text" value="" class="form-control">
+                                            <input type="text" value="" class="form-control" readonly>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="control-label">Place Of Work :</label>
-                                            <input type="text" value="" class="form-control" >
+                                            <input type="text" value="" class="form-control" readonly>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label">Contact No. :</label>
-                                            <input type="text" value="" class="form-control" >
+                                            <input type="text" value="" class="form-control" readonly>
                                         </div>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label">Date :</label>
                                             <input type="text" value="" class="form-control" readonly>
@@ -125,8 +125,8 @@
                     
             <div class="modal-footer">
                 <div class="align-self-center text-left">
-                <button type="button" class="btn btn waves-effect waves-light btn-danger" data-dismiss="modal">@lang('medical_board/modal.cancel')</button></div>
-                <button type="button" id="submitModal" class="btn btn waves-effect waves-light btn-success"><i class="fa fa-check"></i> @lang('medical_board/modal.save')</button>
+                
+                <button type="button" id="submitModal" class="btn btn waves-effect waves-light btn-success"><i class="fa fa-check"></i> @lang('Print')</button>
             </div>
                 </form>
             </div>

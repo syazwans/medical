@@ -36,19 +36,19 @@
                                                             <input type="text" value="" class="form-control" readonly>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label class="control-label">@lang('ID No. :')</label>
                                                             <input type="text" value="" class="form-control" readonly>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-3">
+                                                    <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label class="control-label">@lang('Age :')</label>
                                                             <input type="text" value="" class="form-control" readonly>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-3">
+                                                    <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label class="control-label">@lang('Gender :')</label>
                                                             <input type="text" value="" class="form-control" readonly>
@@ -73,17 +73,17 @@
                                                             <input type="text" value="" class="form-control" readonly>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
                                                             <label class="control-label">@lang('Diagnosis :')</label>
-                                                            <input type="text" value="" class="form-control" readonly>
+                                                            <textarea type="text" rows="3" class="form-control" readonly></textarea>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
                                                             <label class="control-label">@lang('Medical
                                                                 Problem')</label>
-                                                            <input type="text" value="" class="form-control" readonly>
+                                                                <textarea type="text" rows="3" class="form-control" readonly></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 offset-6">
@@ -125,7 +125,7 @@
                                                                 <th>Employer Code</th>
                                                                 <th>Employer Name</th>
                                                                 <th>Occupation</th>
-                                                                <th>Type Of Industry</th>
+                                                                <th>Type of Industry</th>
                                                             </thead>
                                                             <tbody>
                                                                 <td></td>

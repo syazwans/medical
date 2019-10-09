@@ -57,9 +57,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="control-label">@lang('Source :')</label>
-                                                        <input type="text"
-                                                            value=""
-                                                            class="form-control" readonly>
+                                                        <input type="text" value="" class="form-control" readonly>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 offset-6">
@@ -172,59 +170,69 @@
                                                                     <div class="row p-t-20">
                                                                         <div class="col-md-12">
                                                                             <div class="form-group">
-                                                                                <label class="control-label">@lang('Purpose Of Referral :')</label>
-                                                                                <input type="text"
-                                                                                    value=""
+                                                                                <label
+                                                                                    class="control-label">@lang('Purpose
+                                                                                    Of Referral :')</label>
+                                                                                <input type="text" value=""
                                                                                     class="form-control" readonly>
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-md-12">
                                                                             <div class="form-group">
-                                                                                <label class="control-label">@lang('Investigation Details :')</label>
-                                                                                <input type="text"
-                                                                                    value=""
+                                                                                <label
+                                                                                    class="control-label">@lang('Investigation
+                                                                                    Details :')</label>
+                                                                                <input type="text" value=""
                                                                                     class="form-control" readonly>
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-md-5">
                                                                             <div class="form-group">
-                                                                                <label class="control-label">@lang('Investigation Date :')</label>
-                                                                                <input type="date"
-                                                                                    value=""
-                                                                                    class="form-control" >
+                                                                                <label
+                                                                                    class="control-label">@lang('Investigation
+                                                                                    Date :')</label>
+                                                                                <input type="date" value=""
+                                                                                    class="form-control" readonly>
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-md-12">
                                                                             <div class="form-group">
-                                                                                <label class="control-label">@lang('Investigation By :')</label>
-                                                                                <input type="text"
-                                                                                    value=""
-                                                                                    class="form-control">
+                                                                                <label
+                                                                                    class="control-label">@lang('Investigation
+                                                                                    By :')</label>
+                                                                                <input type="text" value=""
+                                                                                    class="form-control" readonly>
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-md-12">
                                                                             <div class="form-group">
                                                                                 <div class="radio">
-                                                                                    <label><input type="radio" name="optradio" checked>Accident</label>
-                                                                                
-                                                                                    <label><input type="radio" name="optradio">Not An Accident</label>
+                                                                                    <label><input type="radio"
+                                                                                            name="optradio"
+                                                                                            checked>Accident</label>
+
+                                                                                    <label><input type="radio"
+                                                                                            name="optradio">Not An
+                                                                                        Accident</label>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-md-12">
                                                                             <div class="form-group">
-                                                                                <label class="control-label">@lang('Comment :')</label>
-                                                                                <input type="text"
-                                                                                    value=""
-                                                                                    class="form-control">
+                                                                                <label
+                                                                                    class="control-label">@lang('Comment
+                                                                                    :')</label>
+                                                                                <input type="text" value=""
+                                                                                    class="form-control" readonly>
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-md-12">
                                                                             <div class="form-group">
-                                                                                <label class="control-label">@lang('Conclusion :')</label>
-                                                                                <input type="text"
-                                                                                    value=""
-                                                                                    class="form-control">
+                                                                                <label
+                                                                                    class="control-label">@lang('Conclusion
+                                                                                    :')</label>
+                                                                                <input type="text" value=""
+                                                                                    class="form-control" readonly> 
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -245,4 +253,3 @@
         </div>
     </div>
 </div>
-    
