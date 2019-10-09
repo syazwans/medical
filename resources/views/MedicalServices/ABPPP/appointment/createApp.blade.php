@@ -77,7 +77,7 @@
     $('#add_panel').click(function(){
     no++;
     $('#table_panel > tbody:last-child').append('<tr><td>'+
-    +no+
+    +no+c
     '</td>'+
         '<td><input type="text" value="" class="form-control"></td>'+
         '<td></td></tr>');
