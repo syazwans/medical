@@ -108,30 +108,9 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr id="clari1">
-                                                        <td style="display:none;"><input type="hidden" value="1"></td>
-                                                        <td>1</td>
-                                                        <td width="60">
-                                                            <select class="form-control" style="width:300px;" id="change">
-                                                            <option value="PS" hidden selected readonly>Please Select</option>
-                                                            <option value="1">Employer/Insured Person</option>
-                                                            <option value="2">Scheme</option>
-                                                            <option value="3">RTW</option>
-                                                            <option value="4">Medical Investigation-PERKESO Doctor</option>
-                                                            <option value="5">Medical Investigation-Special Report</option>
-                                                            <option value="6">Medical Investigation- Medical Clarification</option>
-                                                            </select>
-                                                        </td>
-                                                        <td>
-                                                           <div class="input-group-append">
-                                                            <a id="view" data-toggle="modal" data-target="#modal_document" data-id="1" data-whatever="@getbootstrap"
-                                                            href="#tt1" aria-expanded="true"><i class="fas fa-file-alt" title="View" data-toggle="tooltip"></i></a>
-                                                                @include('MedicalServices.noticeAccident.modal_document')
-                                                            </div>
-                                                            <p id="requestDoc1"></p>
-                                                        </td>
-                                                        <td><input type="text" value="" class="form-control" ></td>
-                                                        <td></td>
+                                                    <tr>
+                                                        <td style="display:none;"><input type="hidden" value="0"></td>
+                                                        
                                                     </tr>
                                                 </tbody>
                                             </table>

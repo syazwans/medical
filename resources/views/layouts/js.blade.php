@@ -376,7 +376,6 @@ $("#btn_diagnosis").click(function () {
         });
     });
 
-
     $("#btn_appointment_modal").click(function () {
         var no = $('#myTable_appointment tr:last td:first').find("input").val();
         var delete2 = "('Are you sure want to delete the draft?')";
@@ -391,6 +390,33 @@ $("#btn_diagnosis").click(function () {
 
             $('#myTable_appointment').each(function(){
             $('#appoint'+no+'').remove();
+        });
+        });
+    });
+    $('#btn_create').click(function () {
+    // alert('syauqigila');
+        var meeting = $('#id_meeting').val();
+        var date = $('#create_date').val();
+        var time = $('#create_time').val();
+        var delete1 = "('Are you sure want to delete the draft?')";
+        var no = $('#myTable_create tr:last td:first').find("input").val();
+        no++;
+        // var no_index = no++
+        $('#myTable_create > tbody:last-child').append('<tr id="create'+no+'">'+
+                                                            '<td style="display:none;"><input type="hidden" value="'+no+'"></td>'+
+                                                            '<td>'+meeting+'</td>'+
+                                                            '<td>'+date+'</td>'+
+                                                            '<td>'+time+'</td>'+
+                                                            '<td></td>'+
+                                                            '<td></td>'+
+                                                            '<td><a class="btn btn-sm btn-danger" id="deletedraft2'+no+'" confirm('+delete1+'); ><i class="fas fa-trash-alt fa-sm"></i></a></td>'+
+                                                            '</tr>');
+
+        $('#deletedraft2'+no+'').click(function(){
+            alert('Are you sure want to delete the draft? ');
+
+            $('#myTable_create').each(function(){
+            $('#create'+no+'').remove();
         });
         });
     });
@@ -448,8 +474,8 @@ $("#btn_diagnosis").click(function () {
                                                 'data-target="#modal_document" data-id="'+no+'" data-whatever="@getbootstrap"'+
                                                 ' href="#tt'+no+'" aria-expanded="true"><i class="fas fa-file-alt"title="View" data-toggle="tooltip"></i></a>'+
                                                 '</div>'+
-                                                '<p id="requestDoc'+no+'"></p></td>'+
-                                                ' </div></td><td></td> <td align="middle"><a class="btn btn-sm btn-danger" id="deletedraft'+no+'" confirm('+delete1+'); ><i class="fas fa-trash-alt fa-sm"></i></a></td> </tr>');
+                                                '<p id="requestDoc'+no+'"></p></td> <td><input type="text" value="" class="form-control" ></td>'+
+                                                ' </div></td> <td align="middle"><a class="btn btn-sm btn-danger" id="deletedraft'+no+'" confirm('+delete1+'); ><i class="fas fa-trash-alt fa-sm"></i></a></td> </tr>');
                                            
                                                 $(document).ready(function () {
 
@@ -572,6 +598,63 @@ jQuery('#date').datepicker({
     format: 'dd/mm/yyyy',
 });
 
+</script>
+
+<script>
+    // DataTable
+    var table = $('#committeeTable').DataTable({
+        "paging":   false,
+        "ordering": false,
+        "info":     false,
+        sDom: 'lrtip'
+    });
+
+    // Apply the search
+    table.columns(0).every(function () {
+        var that = this;
+        
+        $('#commit_no').on('keyup change', function () {
+            if (that.search() !== this.value) {
+                that
+                    .search(this.value)
+                    .draw();
+            }
+        });
+    });
+
+
+// 	$(document).ready(function () {
+// 		var language= $('#change_language').val();
+// 		if(language=="BM"){
+//       //$('#malay').addClass("ti-check");
+//       //$('#english').removeClass("ti-check");
+      
+//       //chg07072019 - irina
+//       $('#malay').css("cssText", "font-weight:bold !important;");
+//       $('#english').css("cssText", "font-weight:normal !important;");
+
+//       $('#committeeTable').DataTable({
+      	
+//       	language: {
+//       		"url": "//cdn.datatables.net/plug-ins/1.10.19/i18n/Malay.json"
+//       	},
+//       });
+//       $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+//   }
+//   else{
+//       //$('#english').addClass("ti-check");
+//       //$('#malay').removeClass("ti-check");
+      
+//       $('#committeeTable').DataTable({
+      	
+//       });
+//       $('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
+//       //chg07072019 - irina
+//       $('#malay').css("cssText", "font-weight:normal !important;");
+//       $('#english').css("cssText", "font-weight:bold !important;");
+
+//   }
+// });
 </script>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>

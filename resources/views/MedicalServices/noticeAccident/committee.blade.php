@@ -316,7 +316,7 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="control-label">@lang('Recommendation  q :')</label>
+                                                    <label class="control-label">@lang('Recommendation :')</label>
                                                     <input type="text" value="" class="form-control" >
                                                 </div>
                                             </div>

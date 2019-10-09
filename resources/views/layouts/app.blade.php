@@ -212,7 +212,7 @@
         </footer>
     </div>
     @include('layouts.js')
-    @yield('script')
+    <!-- @yield('script') -->
 </body>
 
 </html>

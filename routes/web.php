@@ -249,6 +249,10 @@ Route::get('/blank', function () {
     return view('MedicalServices.ABPPP.appointment.blank');
 });
 
+Route::get('/previewCommittee', function () {  
+    return view('MedicalServices.ABPPP.appointment.previewCommittee');
+});
+
 
 
 
