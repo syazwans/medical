@@ -267,3 +267,5 @@ Route::get('/investigate_internal', 'medicalServices\InvestigationController@ind
 Route::get('/investigate_internal_abppp', 'medicalServices\InvestigationController@indexInternalAbppp')->name('investigate_internal_abppp');
 Route::get('/special_report', 'medicalServices\InvestigationController@indexSpecialReport')->name('special_report');
 Route::get('/special_report_aobppp', 'medicalServices\InvestigationController@indexSpecialReportAobpp')->name('special_report_aobppp');
+
+Route::get('/consent_acpp/{id}', 'medicalServices\generateConsentLetter@show')->name('consent_acpp');

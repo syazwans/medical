@@ -22,42 +22,49 @@
                                         <div class="card-body">
                                             <div class="form-body">
                                                 <div class="row p-t-20">
-                                                        <div class="col-12">
-                                                            <div class="table-responsive">
-                                                                <table id="demo-foo-row-toggler" class="table table-bordered"
-                                                                    data-toggle-column="first">
-                                                                    <thead>
-                                                                        <th>Document</th>
-                                                                        <th>Generate</th>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <td>Medical Clarification Form</td>
-                                                                        <td><div class="input-group ">
-                                                                                <div class="input-group-append">
-                                                                                    <a id="view" data-toggle="modal"
-                                                                                            data-target="#clarification"
-                                                                                            data-whatever="@getbootstrap" href="#tt1"
-                                                                                            aria-expanded="true"><i class="fas fa-file-alt"
-                                                                                                title="Generate
-                                                                                            " data-toggle="tooltip"></i></a></span>
-                                                                                    @include('MedicalServices.noticeAccident.clarification')
-                                                                                </div></td>
-                                                                    </tbody>
-                                                                    <tbody>
-                                                                        <td>Consent Letter</td>
-                                                                        <td></td>
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
+                                                    <div class="col-12">
+                                                        <div class="table-responsive">
+                                                            <table id="demo-foo-row-toggler"
+                                                                class="table table-bordered" data-toggle-column="first">
+                                                                <thead>
+                                                                    <th>Document</th>
+                                                                    <th>Generate</th>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <td>Medical Clarification Form</td>
+                                                                    <td>
+                                                                        <div class="input-group-append">
+                                                                            <a id="view" data-toggle="modal"
+                                                                                data-target="#clarification"
+                                                                                data-whatever="@getbootstrap"
+                                                                                href="#tt1" aria-expanded="true"><i
+                                                                                    class="fas fa-file-alt" title="Generate
+                                                                                            "
+                                                                                    data-toggle="tooltip"></i></a></span>
+                                                                            @include('MedicalServices.noticeAccident.clarification')
+                                                                        </div>
+                                                                    </td>
+                                                                </tbody>
+                                                                <tbody>
+                                                                    <td>Consent Letter</td>
+                                                                    <td> <div class="input-group-append">
+                                                                            <a id="view" href="{{ route('consent_acpp',15) }}" target="_blank"><i
+                                                                                    class="fas fa-file-alt" title="Generate"
+                                                                                    data-toggle="tooltip"></i></a></span>
+                                                                        </div></td>
+                                                                </tbody>
+                                                            </table>
                                                         </div>
+                                                    </div>
                                                     <div class="col-md-6 offset-6">
                                                         <a class=" btn btn waves-effect waves-light btn-success a1"
-                                                            data-toggle="collapse" data-target="#collapseOne,#collapseTwo"
-                                                            aria-expanded="true" aria-controls="collapseOne1">
+                                                            data-toggle="collapse"
+                                                            data-target="#collapseOne,#collapseTwo" aria-expanded="true"
+                                                            aria-controls="collapseOne1">
                                                             Next
                                                         </a>
                                                     </div>
-                                                </div> 
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -69,7 +76,7 @@
                                         <a class="collapsed link" data-toggle="collapse" data-parent="#accordion1"
                                             href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i
                                                 class="fa fa-plus"></i>
-                                                Upload Document
+                                            Upload Document
                                         </a>
                                     </h5>
                                 </div>
@@ -93,9 +100,10 @@
                                                             </tbody>
                                                         </table>
                                                         <div class="col-md-6 offset-6">
-                                                            <a class="btn btn waves-effect waves-light btn-success a1" data-toggle="collapse"
-                                                                data-target="#collapseTwo,#collapseThree" aria-expanded="true"
-                                                                aria-controls="collapseTwo22">
+                                                            <a class="btn btn waves-effect waves-light btn-success a1"
+                                                                data-toggle="collapse"
+                                                                data-target="#collapseTwo,#collapseThree"
+                                                                aria-expanded="true" aria-controls="collapseTwo22">
                                                                 Next
                                                             </a>
                                                         </div>
@@ -113,4 +121,3 @@
         </div>
     </div>
 </div>
-    
