@@ -79,12 +79,12 @@
                         class="hidden-xs-down">@lang('Main')</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#set_appointment_campaign" role="tab">
+             <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#report_campaign" role="tab">
                     <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
-                        class="hidden-xs-down">@lang('Set Appointment')</span>
+                        class="hidden-xs-down">@lang('Review, Update, & Approve Report')</span>
                 </a>
-            </li>
+            </li>{{--
             <li class="nav-item">
                 <a class="nav-link" data-toggle="tab" href="#prepare_doc" role="tab">
                     <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
@@ -96,27 +96,27 @@
                     <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
                         class="hidden-xs-down">@lang('Supporting Document')</span>
                 </a>
-            </li>
+            </li> --}}
         </ul>
         <!-- Tab panes -->
         <div class="tab-content tabcontent-border">
 
             <div class="tab-pane p-20 active" id="main_tab" role="tabpanel">
-                @include('MedicalServices.Campaign.ABPPP.main_campaign')
+                @include('MedicalServices.Campaign.MOEI.main_campaign')
 
             </div>
-            <div class="tab-pane p-20" id="set_appointment_campaign" role="tabpanel">
-                @include('MedicalServices.Campaign.ABPPP.set_appointment') 
+             <div class="tab-pane p-20" id="report_campaign" role="tabpanel">
+                @include('MedicalServices.Campaign.MOEI.report') 
 
-            </div>
+            </div>{{--
             <div class="tab-pane p-20" id="prepare_doc" role="tabpanel">
                 @include('MedicalServices.Campaign.ABPPP.prepare_report') 
 
             </div> 
             <div class="tab-pane p-20" id="support_doc_campaign" role="tabpanel">
-                <!-- @include('MedicalServices.Investigation.ACPP.invoice') -->
+                @include('MedicalServices.Investigation.ACPP.invoice') 
 
-            </div>
+            </div> --}}
             
         </div>
     </div>
