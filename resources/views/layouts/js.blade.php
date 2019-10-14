@@ -422,6 +422,51 @@ $("#btn_diagnosis").click(function () {
         });
     });
 
+    $("#btn_setApp").click(function () {
+        var no = $('#myTable_setApp tr:last td:first').find("input").val();
+        var delete3 = "('Are you sure want to delete the draft?')";
+        no++;
+        // var no = no++;
+        $('#myTable_setApp > tbody:last-child').append('<tr id="setapp'+no+'">'+
+            '<td style="display:none;"><input type="hidden" value="'+no+'"></td>'+
+
+                                            '<td></td>'+
+                                            '<td></td>'+
+                                            '<td></td>'+
+                                            '<td></td>'+
+                                            '<td></td>'+
+                                            '<td></td>'+
+                                            '<td><a class="btn btn-sm btn-danger" id="deletedraft3'+no+'" confirm('+delete3+'); ><i class="fas fa-trash-alt fa-sm"></i></a></td></tr>');
+          
+        $('#deletedraft3'+no+'').click(function(){
+            alert('Are you sure want to delete the draft? ');
+
+            $('#myTable_setApp').each(function(){
+            $('#setapp'+no+'').remove();
+        });
+        });
+    });
+
+    $("#btn_att").click(function () {
+        var no = $('#myTable_att tr:last td:first').find("input").val();
+        var delete4 = "('Are you sure want to delete the draft?')";
+        no++;
+        // var no = no++;
+        $('#myTable_att > tbody:last-child').append('<tr id="att'+no+'">'+
+                    '<td style="display:none;"><input type="hidden" value="'+no+'"></td>'+
+                    '<td></td>'+
+                    '<td></td>'+
+                    '<td><a class="btn btn-sm btn-danger" id="deletedraft4'+no+'" confirm('+delete4+'); ><i class="fas fa-trash-alt fa-sm"></i></a></td></tr>');
+          
+        $('#deletedraft4'+no+'').click(function(){
+            alert('Are you sure want to delete the draft? ');
+
+            $('#myTable_att').each(function(){
+            $('#att'+no+'').remove();
+        });
+        });
+    });
+
     $("#btn_moei_investigation").click(function () {
         var no = $('#myTable_moei_investigation tr:last td:first').find("input").val();
         var delete1 = "('Are you sure want to delete the draft?')";

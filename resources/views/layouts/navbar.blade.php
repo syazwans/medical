@@ -71,7 +71,7 @@
             <ul aria-expanded="false" class="collapse">
                 <li><a href="/abppp">@lang('Appointment')</a></li>
                 <li><a href="/committee">@lang('Committee')</a></li>
-                <li><a href="/campaign">@lang('Campaign')</a></li>
+                <li><a href="/campaignABPPP">@lang('Campaign')</a></li>
                 <li></li>
                 
 
@@ -99,7 +99,7 @@
                 <ul aria-expanded="false" class="collapse">
                     <li><a href="/newcase">@lang('New Case')</a></li>
                     <li><a href="/reportstatus">@lang('Report Status')</a></li>
-                    <li><a href="/campaign">@lang('Campaign')</a></li>
+                    <li><a href="/campaignMOEI">@lang('Campaign')</a></li>
                     <li></li>
     
                 </ul>

@@ -78,7 +78,7 @@
                                         <div class="form-body">
                                             <div class="row p-t-20">
                                                 <div class="col-12">
-                                                    <div class="table-responsive">
+                                                    <div class="table-responsive"> 
                                                         <table id="demo-foo-row-toggler" class="table table-bordered"
                                                             data-toggle-column="first">
                                                             <thead>
