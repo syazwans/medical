@@ -95,7 +95,14 @@
                                                             </thead>
                                                             <tbody>
                                                                 <td>Upload Consent Letter</td>
-                                                                <td></td>
+                                                                <td><div class="input-group-append">
+                                                                            <a id="uploaddraft" data-toggle="modal"
+                                                                                data-target=""
+                                                                                data-whatever="@getbootstrap"
+                                                                                href="#tt1" aria-expanded="true"><i
+                                                                                    class="fas fa-file-alt" title="Upload"
+                                                                                    data-toggle="tooltip"></i></a></span>
+                                                                        </div></td>
                                                                 <td></td>
                                                             </tbody>
                                                         </table>

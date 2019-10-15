@@ -227,9 +227,6 @@ Route::get('/newcase', function () {
 Route::get('/reportstatus', function () {
     return view('MedicalServices.Investigation.ABPPP.report_status');
 });
-Route::get('/campaignABPPP', function () {
-    return view('MedicalServices.Campaign.ABPPP.index');
-});
 Route::get('/campaignMOEI', function () {
     return view('MedicalServices.Campaign.MOEI.index');
 });

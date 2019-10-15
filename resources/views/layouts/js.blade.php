@@ -467,6 +467,29 @@ $("#btn_diagnosis").click(function () {
         });
     });
 
+    $("#btn_add_campaign").click(function () {
+        var no = $('#myTable_campaign tr:last td:first').find("input").val();
+        var delete4 = "('Are you sure want to delete the draft?')";
+        no++;
+        // var no = no++;
+        $('#myTable_campaign > tbody:last-child').append('<tr id="att'+no+'">'+
+                    '<td style="display:none;"><input type="hidden" value="'+no+'"></td>'+
+                    '<td></td>'+
+                    '<td></td>'+
+                    '<td></td>'+
+                    '<td></td>'+
+                    '<td></td>'+
+                    '<td><a class="btn btn-sm btn-danger" id="deletedraft4'+no+'" confirm('+delete4+'); ><i class="fas fa-trash-alt fa-sm"></i></a></td></tr>');
+          
+        $('#deletedraft4'+no+'').click(function(){
+            alert('Are you sure want to delete the draft? ');
+
+            $('#myTable_campaign').each(function(){
+            $('#att'+no+'').remove();
+        });
+        });
+    });
+
     $("#btn_moei_investigation").click(function () {
         var no = $('#myTable_moei_investigation tr:last td:first').find("input").val();
         var delete1 = "('Are you sure want to delete the draft?')";

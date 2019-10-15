@@ -74,19 +74,19 @@
         <!-- Nav tabs -->
         <ul class="nav customtab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#main_tab" role="tab">
+                <a class="nav-link" data-toggle="tab" href="#create_campaign" role="tab">
                     <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
-                        class="hidden-xs-down">@lang('Main')</span>
+                        class="hidden-xs-down">@lang('Create Campaign')</span>
                 </a>
             </li>
              <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#report_campaign" role="tab">
+                <a class="nav-link" data-toggle="tab" href="#campaign_notes" role="tab">
                     <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
-                        class="hidden-xs-down">@lang('Review, Update, & Approve Report')</span>
+                        class="hidden-xs-down">@lang('Campaign Notes')</span>
                 </a>
-            </li>{{--
+            </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#prepare_doc" role="tab">
+                <a class="nav-link" data-toggle="tab" href="#prepare_report" role="tab">
                     <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
                         class="hidden-xs-down">@lang('Prepare Report')</span>
                 </a>
@@ -96,27 +96,27 @@
                     <span class="hidden-sm-up"><i class="ti-user"></i></span> <span
                         class="hidden-xs-down">@lang('Supporting Document')</span>
                 </a>
-            </li> --}}
+            </li>
         </ul>
         <!-- Tab panes -->
         <div class="tab-content tabcontent-border">
 
-            <div class="tab-pane p-20 active" id="main_tab" role="tabpanel">
-                @include('MedicalServices.Campaign.MOEI.main_campaign')
+            <div class="tab-pane p-20 active" id="create_campaign" role="tabpanel">
+                @include('MedicalServices.Campaign.MOEI.create_campaign')
 
             </div>
-             <div class="tab-pane p-20" id="report_campaign" role="tabpanel">
-                @include('MedicalServices.Campaign.MOEI.report') 
+             <div class="tab-pane p-20" id="campaign_notes" role="tabpanel">
+                @include('MedicalServices.Campaign.MOEI.campaign_notes') 
 
-            </div>{{--
-            <div class="tab-pane p-20" id="prepare_doc" role="tabpanel">
-                @include('MedicalServices.Campaign.ABPPP.prepare_report') 
+            </div>
+            <div class="tab-pane p-20" id="prepare_report" role="tabpanel">
+                @include('MedicalServices.Campaign.MOEI.prepare_report') 
 
             </div> 
             <div class="tab-pane p-20" id="support_doc_campaign" role="tabpanel">
-                @include('MedicalServices.Investigation.ACPP.invoice') 
+            @include('MedicalServices.Campaign.MOEI.support_doc') 
 
-            </div> --}}
+            </div>
             
         </div>
     </div>

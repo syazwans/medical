@@ -71,7 +71,6 @@
             <ul aria-expanded="false" class="collapse">
                 <li><a href="/abppp">@lang('Appointment')</a></li>
                 <li><a href="/committee">@lang('Committee')</a></li>
-                <li><a href="/campaignABPPP">@lang('Campaign')</a></li>
                 <li></li>
                 
 
